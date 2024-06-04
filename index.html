@@ -1,7 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .container {
+            padding: 20px;
+        }
+        .project {
+            border: 1px solid #555;
+            margin: 20px 0;
+            padding: 20px;
+        }
+        .project h2 {
+            margin-top: 0;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <header>
+        <h1>Mi Portafolio</h1>
+    </header>
+    <nav>
+        <a href="#about">Sobre Mí</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h2>Sobre Mí</h2>
+            <p>Hola, soy [Tu Nombre], un desarrollador web apasionado por crear soluciones innovadoras. Tengo experiencia en diversas tecnologías y me encanta aprender cosas nuevas.</p>
+        </section>
+        <section id="projects">
+            <h2>Proyectos</h2>
+            <div class="project">
+                <h2>Proyecto 1</h2>
+                <p>Descripción del proyecto 1.</p>
+            </div>
+            <div class="project">
+                <h2>Proyecto 2</h2>
+                <p>Descripción del proyecto 2.</p>
+            </div>
+            <!-- Agrega más proyectos según sea necesario -->
+        </section>
+        <section id="contact">
+            <h2>Contacto</h2>
+            <p>Puedes contactarme a través de <a href="mailto:tuemail@example.com">tuemail@example.com</a>.</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 [Tu Nombre]. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
