@@ -1,9 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Adriana Chipana's personal portfolio">
+    <link rel="stylesheet" href="./Styles/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <title>Adriana Chipana | Software Developer</title>
+</head>
+
 <body>
-
-    <head>
-        <link rel="stylesheet" href="Styles/index.css">
-    </head>
-
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
     </div>
@@ -11,7 +21,7 @@
     <!-- Header -->
     <nav class="navbar">
         <div class="max-width">
-            <div class="logo"><a href="#"><span>CJSTREETS</span><span>.com</span></a></div>
+            <div class="logo"><a href="#"><span></span><span></span></a></div>
             <ul class="menu">
                 <li><a href="#home" class="menu-btn"><strong>Home</strong></a></li>
                 <li><a href="#about" class="menu-btn"><strong>About</strong></a></li>
@@ -31,31 +41,32 @@
         <div class="max-width">
             <div class="home-content">
                 <div class="text-1">Hello, This is</div>
-                <div class="text-2">Connor Streets</div>
-                <div class="text-3">And I'm a <span class="typing"></span></div>
-                <a href="#">Hire me</a>
+                <div class="text-2">Adriana Chipana</div>
+                <div class="text-3">And I'm a Software Developer<span class="typing"></span></div>
+            </div>
+            <div class="home-image">
+                <img src="Resources/Images/kali.png" alt="Home Image">
             </div>
         </div>
     </section>
 
-    <!--  About  -->
+    <!-- About -->
     <section class="about" id="about">
         <div class="max-width">
             <h2 class="title">About Me</h2>
             <div class="about-content">
                 <div class="column left">
-                    <img src="https://source.unsplash.com/626x626/?profile" alt="Profile Image 626x626">
+                    <img src="Resources/Images/foto.png" alt="Profile Image">
                 </div>
                 <div class="column right">
-                    <div class="text">I'm Akash and I'm a <span class="typing-2"></span></div>
+                    <div class="text">I'm Adriana and I'm a <span class="typing-2"></span></div>
                     <p>Seeking an entry-level opportunity with an esteemed organization where I can utilize my skills &
                         enhance learning in the field of work. Capable of mastering new technologies.</p>
                     <br>
                     <div class="text">Why Work With Me</div>
                     <p>I'm a great communicator & love to invest the necessary time to understand the customer's problem
                         very well.</p>
-
-                    <a href="#link" target="blank">Download CV</a>
+                    <a href="#link" target="_blank">Download CV</a>
                 </div>
             </div>
         </div>
@@ -64,34 +75,37 @@
     <!-- Services -->
     <section class="services" id="services">
         <div class="max-width">
-            <h2 class="title">My services</h2>
+            <h2 class="title">My Services</h2>
             <div class="serv-content">
                 <div class="card">
                     <div class="box">
                         <i class="fas fa-laptop-code"></i>
-                        <div class="text">Web Design</div>
-                        <p>Your Next Web Developer, who is working in Shopify Dropshipping Stores, High Converting
-                            Ecommerce stores, Product Page also having Custom code, liquid template design.</p>
+                        <div class="text">Front End Development</div>
+                        <p>I am a Full Stack developer with expertise in designing and curating the front end for
+                            applications that drive engagement. I have an aptitude for all the latest front-end
+                            development languages, such as the most recent versions of Angular, ReactJS,
+                            Vue.Js, and more</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
                         <i class="fas fa-user-secret"></i>
-                        <div class="text">User Secret</div>
-                        <p>I ensures that, there is no sensitive data included in the source code and are stored outside
-                            of the project folder. And all the data which is stored by User Secrets is not encrypted.
-                        </p>
+                        <div class="text">Backend Development</div>
+                        <p>Working with me for backend development ensures you will get the most attractive outcomes, as
+                            I continually deal with cutting-edge technologies like .NET, Java, Node.js, PHP, Python, and
+                            more. This provides state-of-the-art results while saving you development time and money</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
                         <i class="fas fa-code"></i>
-                        <div class="text">Apps Design</div>
-                        <p>I encompasses both the user interface(UI) & user experience(UX). The overall style of the
-                            app, including things like the colour scheme, font selection, and the types of buttons and
-                            widgets which will use.</p>
+                        <div class="text">API Integration</div>
+                        <p>I execute integrations for services such as payment systems, social networks, geo-services,
+                            business tools, email marketing, and more, rather than using third-party APIs for
+                            integration.</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -102,81 +116,274 @@
             <h2 class="title">My Skills</h2>
             <div class="skills-content">
                 <div class="column left">
+                    <div class="logo-grid">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452 520">
+                            <path fill="#e34f26" d="M41 460L0 0h451l-41 460-185 52" />
+                            <path fill="#ef652a" d="M226 472l149-41 35-394H226" />
+                            <path fill="#ecedee"
+                                d="M226 208h-75l-5-58h80V94H84l15 171h127zm0 147l-64-17-4-45h-56l7 89 117 32z" />
+                            <path fill="#fff" d="M226 265h69l-7 73-62 17v59l115-32 16-174H226zm0-171v56h136l5-56z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452 520">
+                            <path fill="#0c73b8" d="M41 460L0 0h451l-41 460-185 52" />
+                            <path fill="#30a9dc" d="M226 472l149-41 35-394H226" />
+                            <path fill="#ecedee"
+                                d="M226 208H94l5 57h127zm0-114H84l5 56h137zm0 261l-124-33 7 60 117 32z" />
+                            <path fill="#fff" d="M226 265h69l-7 73-62 17v59l115-32 26-288H226v56h80l-6 58h-74z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2500" height="2500" viewBox="0 0 1052 1052">
+                            <path fill="#f0db4f" d="M0 0h1052v1052H0z" />
+                            <path
+                                d="M965.9 801.1c-7.7-48-39-88.3-131.7-125.9-32.2-14.8-68.1-25.399-78.8-49.8-3.8-14.2-4.3-22.2-1.9-30.8 6.9-27.9 40.2-36.6 66.6-28.6 17 5.7 33.1 18.801 42.8 39.7 45.4-29.399 45.3-29.2 77-49.399-11.6-18-17.8-26.301-25.4-34-27.3-30.5-64.5-46.2-124-45-10.3 1.3-20.699 2.699-31 4-29.699 7.5-58 23.1-74.6 44-49.8 56.5-35.6 155.399 25 196.1 59.7 44.8 147.4 55 158.6 96.9 10.9 51.3-37.699 67.899-86 62-35.6-7.4-55.399-25.5-76.8-58.4-39.399 22.8-39.399 22.8-79.899 46.1 9.6 21 19.699 30.5 35.8 48.7 76.2 77.3 266.899 73.5 301.1-43.5 1.399-4.001 10.6-30.801 3.199-72.101zm-394-317.6h-98.4c0 85-.399 169.4-.399 254.4 0 54.1 2.8 103.7-6 118.9-14.4 29.899-51.7 26.2-68.7 20.399-17.3-8.5-26.1-20.6-36.3-37.699-2.8-4.9-4.9-8.7-5.601-9-26.699 16.3-53.3 32.699-80 49 13.301 27.3 32.9 51 58 66.399 37.5 22.5 87.9 29.4 140.601 17.3 34.3-10 63.899-30.699 79.399-62.199 22.4-41.3 17.6-91.3 17.4-146.6.5-90.2 0-180.4 0-270.9z"
+                                fill="#323330" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2222" height="2500"
+                            preserveAspectRatio="xMidYMid" viewBox="0 -1.43 255.58 290.11">
+                            <path fill="#a179dc"
+                                d="M255.57 84.45c0-4.83-1.04-9.1-3.13-12.76a24.4 24.4 0 0 0-9.24-9C209.17 43.05 175.1 23.5 141.1 3.86c-9.17-5.3-18.06-5.1-27.16.27-13.54 7.98-81.35 46.83-101.55 58.53C4.06 67.5.02 74.87 0 84.44v118.37c0 4.72 1 8.9 2.99 12.51 2.05 3.72 5.17 6.82 9.38 9.26 20.21 11.7 88.02 50.55 101.56 58.53 9.11 5.38 18 5.57 27.17.27 34.02-19.64 68.08-39.2 102.1-58.81a24.33 24.33 0 0 0 9.4-9.25c1.99-3.61 2.98-7.8 2.98-12.52l-.01-118.35" />
+                            <path fill="#280068"
+                                d="M128.18 143.24 2.98 215.33c2.06 3.7 5.18 6.8 9.4 9.25 20.2 11.7 88.01 50.55 101.55 58.53 9.11 5.38 18 5.57 27.17.27 34.02-19.64 68.08-39.2 102.1-58.81a24.33 24.33 0 0 0 9.4-9.25z" />
+                            <path fill="#390091"
+                                d="M255.57 84.45c0-4.83-1.04-9.1-3.13-12.76l-124.26 71.55 124.41 72.07c2-3.6 2.99-7.79 3-12.51 0 0 0-78.9-.02-118.35" />
+                            <g fill="#fff">
+                                <path
+                                    d="M201.9 116.3v13.47h13.47v-13.48h6.73v13.48h13.48v6.73H222.1v13.48h13.48v6.74H222.1v13.47h-6.73V156.7h-13.48v13.48h-6.73V156.7h-13.48v-6.73h13.47V136.5h-13.47v-6.74h13.47v-13.48zm13.47 20.2h-13.48v13.48h13.48z" />
+                                <path
+                                    d="M128.46 48.63a94.96 94.96 0 0 1 82.26 47.45l-.16-.27-41.35 23.8A47.28 47.28 0 0 0 129 96.33h-.54a47.3 47.3 0 0 0-47.3 47.3 47.08 47.08 0 0 0 6.23 23.47 47.28 47.28 0 0 0 82.29-.27l-.2.35 41.29 23.91a94.97 94.97 0 0 1-81.25 47.54h-1.06a94.96 94.96 0 0 1-95-95 95 95 0 0 1 95-95z" />
+                            </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -1 100 50">
+                            <path fill="#fff"
+                                d="M7.579 10.123h14.204c4.169.035 7.19 1.237 9.063 3.604 1.873 2.367 2.491 5.6 1.855 9.699-.247 1.873-.795 3.71-1.643 5.512a16.385 16.385 0 01-3.392 4.876c-1.767 1.837-3.657 3.003-5.671 3.498a26.11 26.11 0 01-6.254.742h-6.36l-2.014 10.07H0l7.579-38.001m6.201 6.042l-3.18 15.9c.212.035.424.053.636.053h.742c3.392.035 6.219-.3 8.48-1.007 2.261-.742 3.781-3.321 4.558-7.738.636-3.71 0-5.848-1.908-6.413-1.873-.565-4.222-.83-7.049-.795-.424.035-.83.053-1.219.053h-1.113l.053-.053M41.093 0h7.314L46.34 10.123h6.572c3.604.071 6.289.813 8.056 2.226 1.802 1.413 2.332 4.099 1.59 8.056l-3.551 17.649h-7.42L54.979 21.2c.353-1.767.247-3.021-.318-3.763s-1.784-1.113-3.657-1.113l-5.883-.053-4.346 21.783h-7.314L41.093 0M70.412 10.123h14.204c4.169.035 7.19 1.237 9.063 3.604 1.873 2.367 2.491 5.6 1.855 9.699-.247 1.873-.795 3.71-1.643 5.512a16.385 16.385 0 01-3.392 4.876c-1.767 1.837-3.657 3.003-5.671 3.498a26.11 26.11 0 01-6.254.742h-6.36L70.2 48.124h-7.367l7.579-38.001m6.201 6.042l-3.18 15.9c.212.035.424.053.636.053h.742c3.392.035 6.219-.3 8.48-1.007 2.261-.742 3.781-3.321 4.558-7.738.636-3.71 0-5.848-1.908-6.413-1.873-.565-4.222-.83-7.049-.795-.424.035-.83.053-1.219.053H76.56l.053-.053" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 242 256">
+                            <g clip-path="url(#a)">
+                                <mask id="b" width="242" height="256" x="0" y="0" maskUnits="userSpaceOnUse"
+                                    style="mask-type:luminance">
+                                    <path fill="#fff" d="M0 0h242v256H0V0Z" />
+                                </mask>
+                                <g mask="url(#b)">
+                                    <path fill="url(#c)"
+                                        d="m241 43-9 136L149 0l92 43Zm-58 176-62 36-63-36 12-31h101l12 31ZM121 68l32 80H88l33-80ZM9 179 0 43 92 0 9 179Z" />
+                                    <path fill="url(#d)"
+                                        d="m241 43-9 136L149 0l92 43Zm-58 176-62 36-63-36 12-31h101l12 31ZM121 68l32 80H88l33-80ZM9 179 0 43 92 0 9 179Z" />
+                                </g>
+                            </g>
+                            <defs>
+                                <linearGradient id="c" x1="53.2" x2="245" y1="231.9" y2="140.7"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#E40035" />
+                                    <stop offset=".2" stop-color="#F60A48" />
+                                    <stop offset=".4" stop-color="#F20755" />
+                                    <stop offset=".5" stop-color="#DC087D" />
+                                    <stop offset=".7" stop-color="#9717E7" />
+                                    <stop offset="1" stop-color="#6C00F5" />
+                                </linearGradient>
+                                <linearGradient id="d" x1="44.5" x2="170" y1="30.7" y2="174"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FF31D9" />
+                                    <stop offset="1" stop-color="#FF5BE1" stop-opacity="0" />
+                                </linearGradient>
+                                <clipPath id="a">
+                                    <path fill="#fff" d="M0 0h242v256H0z" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                            <path fill="#cfd8dc"
+                                d="M23.084 11.277c-1.633-2.449-1.986-5.722-2.063-7.067-4.148.897-8.269 2.506-8.031 3.691.03.149.218.328.53.502l-.488.873c-.596-.334-.931-.719-1.022-1.179-.269-1.341 1.25-2.554 4.642-3.709a42.152 42.152 0 0 1 4.751-1.279l.597-.12V3.6c0 .042.026 4.288 1.916 7.123l-.832.554zM24.751 43H24.5c-8.192 0-17.309-2.573-18.386-6.879-.657-2.63 1.492-5.536 6.214-8.401l.52.854c-4.249 2.579-6.296 5.172-5.763 7.305.935 3.738 9.575 6.068 17.153 6.12.901-1.347 5.742-9.26 2.979-19.873l.967-.252c3.149 12.092-3.218 20.837-3.282 20.924l-.151.202z" />
+                            <path fill="#cfd8dc"
+                                d="M9.931 39.306c-.539 0-.806-.059-.85-.07a.498.498 0 0 1-.233-.84c.072-.072 7.197-7.208 8.159-12.978l.986.164c-.827 4.964-5.715 10.623-7.656 12.707 1.939-.111 6.835-1.019 16.234-6.28-7.335-.804-8.495-6.676-8.507-6.739l.983-.181c.047.246 1.226 6.011 9.244 6.011h.008a.5.5 0 0 1 .251.933c-11.235 6.509-16.683 7.272-18.619 7.273z" />
+                            <path fill="#cfd8dc"
+                                d="M14.524 41.7a.499.499 0 0 1-.291-.907c.034-.025 1.813-1.338 3.706-4.228a19.896 19.896 0 0 1-2.196-1.137c-.888-.533-1.559-1.105-2.06-1.691-2.57.678-4.942.946-7.025.769l.084-.996c1.876.159 4.009-.063 6.321-.64-1.573-2.688-.129-5.356-.109-5.392l.874.487c-.067.122-1.265 2.37.249 4.633 2.201-.632 4.549-1.567 6.979-2.782a32.189 32.189 0 0 0 1.225-6.276.501.501 0 0 1 .706-.406c.032.015 3.264 1.491 5.604 2.454a.5.5 0 0 1 .091.876 62.494 62.494 0 0 1-6.778 4.042 27.19 27.19 0 0 1-2.459 5.591c3.702 1.383 6.915 1.404 6.956 1.404a.5.5 0 0 1 .243.938c-4.54 2.522-11.767 3.232-12.072 3.261h-.048zm4.385-4.733c-1.04 1.614-2.062 2.773-2.826 3.53 1.998-.294 5.501-.938 8.408-2.139a23.733 23.733 0 0 1-5.582-1.391zm-4.142-3.536c.393.392.883.775 1.49 1.14.736.442 1.483.817 2.22 1.135a26.116 26.116 0 0 0 2.142-4.568c-2.021.962-3.983 1.73-5.852 2.293zm8.435-9.102a33.95 33.95 0 0 1-.913 4.85 62.45 62.45 0 0 0 5.062-3.026 207.1 207.1 0 0 1-4.149-1.824zM17.924 10.6a.504.504 0 0 1-.325-.12c-1.61-1.378-3.505-4.182-3.585-4.301a.5.5 0 0 1 .654-.718c.011.003.938.385 7.217 1.431a.499.499 0 0 1 .29.828c-1.758 1.953-3.979 2.813-4.073 2.848a.527.527 0 0 1-.178.032zm-2.277-3.854c.631.849 1.54 1.996 2.372 2.769a11.186 11.186 0 0 0 2.744-1.798c-2.583-.441-4.159-.755-5.116-.971z" />
+                            <path fill="#b71c1c"
+                                d="M21.843 24.4a.5.5 0 0 1-.497-.552c.292-2.749-3.926-3.852-3.969-3.862a.5.5 0 0 1-.23-.838c.207-.207 5.139-5.098 11.327-7.784a.5.5 0 0 1 .689.559c-1.186 5.744-6.71 12.044-6.944 12.309a.51.51 0 0 1-.376.168zm-3.388-5.115c1.184.445 3.258 1.475 3.783 3.356 1.449-1.808 4.542-5.973 5.697-9.934-4.387 2.11-8.081 5.292-9.48 6.578z" />
+                            <path fill="#b71c1c"
+                                d="m13.079 28.36-.475-.88c1.883-1.015 4.04-2.883 5.807-5.054-1.504 1.03-2.365 1.735-2.392 1.758l-.639-.77c.039-.032 1.764-1.447 4.631-3.22.787-1.266 1.392-2.568 1.703-3.816.053-.212.099-.417.136-.615-1.925-.687-3.701-1.094-4.921-1.269a.5.5 0 0 1-.297-.835c.085-.092 2.116-2.268 4.654-3.463a.5.5 0 0 1 .581.114c.067.073 1.44 1.615 1.091 4.805 1.155.45 2.345.997 3.491 1.648 2.759-1.24 5.892-2.356 9.229-3.03a.51.51 0 0 1 .481.168c.117.14.149.333.083.503-1.3 3.332-4.786 6.891-4.934 7.041a.503.503 0 0 1-.748-.04c-1.12-1.408-2.584-2.574-4.163-3.523a55.136 55.136 0 0 0-5.684 3.049c-2.02 3.153-5.069 6.048-7.634 7.429zm14.413-10.964c1.29.832 2.491 1.81 3.484 2.948.828-.898 2.815-3.168 3.942-5.422-2.65.61-5.158 1.493-7.426 2.474zm-4.693-1.274c-.033.163-.071.33-.113.5-.21.839-.544 1.701-.972 2.561a56.183 56.183 0 0 1 3.618-1.898 25.476 25.476 0 0 0-2.533-1.163zm-4.751-2.45c1.111.218 2.48.574 3.941 1.086.152-1.843-.346-2.972-.647-3.472-1.376.718-2.581 1.728-3.294 2.386z" />
+                            <path fill="#b71c1c"
+                                d="M18.05 18.5c0 4.38-3.65 7.86-6.28 10.4-.44.43-1.93.5-1.93.5.37-.38.79-.78 1.24-1.21 2.5-2.42 5.97-5.73 5.97-9.69 0-4.69-1.89-6.54-3.38-8.02-.66-.67-1.22-1.31-1.56-2.09l.31-.13c.34.15.73.32 1.03.45.24.35.56.69.93 1.06 1.53 1.53 3.67 3.63 3.67 8.73z" />
+                            <path fill="#b71c1c"
+                                d="M42.935 19.794s-.605.086-.775.106c-8.76.97-17.8 3.49-22.97 5.56-1.87.75-3.81 1.66-5.58 2.68-.01.01-.02.01-.04.02-1.04.6-3.57 1.84-5.62 2.93 3-3.19 8.62-5.65 10.86-6.55 5.07-2.03 13.78-4.48 22.35-5.53-1.01-1.18-3.48-3.68-8.34-5.54-2.84-1.1-7.16-1.72-10.97-2.27-6.06-.87-9.51-1.45-9.84-3.1-.07-.33-.02-.66.13-.98.33.54.8.92 1.11 1.14.15.1.26.16.3.18l.01.01c1.42.75 5.25 1.3 8.44 1.76 3.86.56 8.23 1.19 11.18 2.32 6.87 2.65 9.24 6.44 9.34 6.6.09.15.415.664.415.664z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 252">
+                            <path
+                                d="M236 194c-14 0-25 1-34 5-3 1-7 1-7 4l3 6c2 3 5 8 9 11l11 8 21 10 11 9 6 4-3-6-5-5c-5-7-11-13-18-18-6-3-18-9-20-15h-1l12-3 18-3 8-2v-2l-9-10c-8-8-18-15-28-22l-18-8c-2-1-6-2-7-4l-7-13-15-30-8-20c-18-30-38-48-68-65-6-4-14-5-22-7l-13-1-8-6C34 5 8-9 1 9c-5 11 7 22 11 28l9 13 3 9c3 8 5 17 9 24l6 10c2 2 4 3 5 6-3 4-3 9-4 13-7 20-4 44 5 59 2 4 9 14 18 10 8-3 6-13 8-22l1-4 8 14c5 9 14 18 22 24 4 3 8 8 13 10l-4-4-9-10c-8-10-14-21-20-32l-7-17-3-6c-3 4-7 7-9 12-3 7-3 17-4 26h-1c-6-1-8-7-10-12-5-12-6-32-1-46 1-4 6-15 4-19-1-3-4-5-6-7l-7-12-10-30-9-13c-3-5-7-8-10-14-1-2-2-5 0-7l2-2c2-2 9 0 11 1 6 3 12 5 17 9l8 6h4c6 1 12 0 17 2 9 3 18 7 25 12 23 14 42 35 54 59 3 4 3 8 5 12l12 26c4 8 7 16 12 23 3 4 14 6 18 8l12 4 18 12c2 2 11 7 12 10Z"
+                                fill="#00546B" />
+                            <path d="m58 43-7 1 6 7 4 9v-1c3-1 4-4 4-8l-2-4-5-4Z" fill="#00546B" />
+                        </svg>
+                        <svg width="54" height="80" viewBox="0 0 54 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_912_3)">
+                                <path
+                                    d="M13.3333 80.0002C20.6933 80.0002 26.6667 74.0268 26.6667 66.6668V53.3335H13.3333C5.97333 53.3335 0 59.3068 0 66.6668C0 74.0268 5.97333 80.0002 13.3333 80.0002Z"
+                                    fill="#0ACF83" />
+                                <path
+                                    d="M0 39.9998C0 32.6398 5.97333 26.6665 13.3333 26.6665H26.6667V53.3332H13.3333C5.97333 53.3332 0 47.3598 0 39.9998Z"
+                                    fill="#A259FF" />
+                                <path
+                                    d="M0 13.3333C0 5.97333 5.97333 0 13.3333 0H26.6667V26.6667H13.3333C5.97333 26.6667 0 20.6933 0 13.3333Z"
+                                    fill="#F24E1E" />
+                                <path
+                                    d="M26.6667 0H40.0001C47.3601 0 53.3334 5.97333 53.3334 13.3333C53.3334 20.6933 47.3601 26.6667 40.0001 26.6667H26.6667V0Z"
+                                    fill="#FF7262" />
+                                <path
+                                    d="M53.3334 39.9998C53.3334 47.3598 47.3601 53.3332 40.0001 53.3332C32.6401 53.3332 26.6667 47.3598 26.6667 39.9998C26.6667 32.6398 32.6401 26.6665 40.0001 26.6665C47.3601 26.6665 53.3334 32.6398 53.3334 39.9998Z"
+                                    fill="#1ABCFE" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_912_3">
+                                    <rect width="53.3333" height="80" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
 
-                    <div class="text">INTERNSHIP</div>
-                    <p>
-                        <li class="intern">#Company Name "Where You work"</li>
-                        <li class="intern">#Company Name "Where You work"</li>
-                        <li class="intern">#Company Name "Where You work"</li>
-                    </p>
-
-                    <br>
-                    <div class="text">PROJECT</div>
-
-                    <p>
-                        <li class="project">Portfolio (HTML, CSS, js, Bootstraps)</li>
-                        <li class="project">eCommerce Website (Shopify liquid-code, HTML, CSS)</li>
-                        <li class="project">QuickShop - eCommerce Website (Like Amazon, Flipkart etc.)</li>
-                        <li class="project">Fully Responsive Design Email Subscribe form</li>
-                        <li class="project">Blog (HTML, CSS, Bootstraps)</li>
-                        <li class="project">Currently Working on a Messaging App (Like WhatsApp)</li>
-                    </p>
-
+                    </div>
                     <br>
                     <div class="text">DEVELOPMENT SKILLS</div>
-
-                    <p>
-                        I'm familiar & work on a daily basis with HTML, CSS, JavaScript, Bootstrap, React js and other
-                        modern frameworks.
-                    </p>
-                    <a href="https://aistechx.com/" target="blank">Get Educate...</a>
+                    <p>I'm familiar & work on a daily basis with HTML, CSS, JavaScript, Bootstrap, React JS and other
+                        modern frameworks.</p>
                 </div>
                 <div class="column right">
                     <div class="bars">
                         <div class="info">
-                            <span>Python</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="line python"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
                             <span>HTML</span>
-                            <span>80%</span>
+                            <span>90%</span>
                         </div>
                         <div class="line html"></div>
                     </div>
                     <div class="bars">
                         <div class="info">
                             <span>CSS</span>
-                            <span>60%</span>
+                            <span>90%</span>
                         </div>
                         <div class="line css"></div>
                     </div>
                     <div class="bars">
                         <div class="info">
                             <span>JavaScript</span>
-                            <span>40%</span>
+                            <span>80%</span>
                         </div>
                         <div class="line js"></div>
                     </div>
                     <div class="bars">
                         <div class="info">
-                            <span>Bootstraps</span>
-                            <span>60%</span>
+                            <span>C#</span>
+                            <span>70%</span>
                         </div>
-                        <div class="line bootstraps"></div>
+                        <div class="line c"></div>
                     </div>
                     <div class="bars">
                         <div class="info">
-                            <span>Django</span>
+                            <span>PHP</span>
                             <span>70%</span>
                         </div>
-                        <div class="line django"></div>
+                        <div class="line php"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>Angular</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="line angular"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>Sql</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="line angular"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>MySql</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="line angular"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>Figma</span>
+                            <span>40%</span>
+                        </div>
+                        <div class="line figma"></div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="timeline">
+        <h2 class="title">Experience</h2>
+        <ul>
+            <li>
+                <div>
+                    <time>03/2024 - Actual</time> <span class="job-title">Desarrollador Full Stack - ISPCORP
+                        (Lima-Perú)</span><br>
+                    Desarrollo de un chatbot para WhatsApp utilizando PHP y MySql Desarrollo e implementación de Apis
+                    Pruebas exhaustivas
+                    utilizando Postman e Insomnia Documentación detallada del desarrollo y mantenimiento del chatbot
+                </div>
+
+            </li>
+            <li>
+                <div>
+                    <time>03/2024 - 05/2024</time><span class="job-title">Desarrollador Front End - Engineers &
+                    devs (Arequipa-Perú)</span><br>
+                    Mantenimiento y mejora de la parte Front End de los proyectos de la empresa
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time>09/2022 - 03/2024</time><span class="job-title">Desarrollador Full Stack - BSG
+                    Institute (Arequipa - Perú)</span><br>
+                    Desarrollo y mantenimiento de aplicación web con tecnologías como C#, Asp.Net, Angular, Typescript.
+                    Integración y creación de Apis
+                    implementación de integraciones con Apis Externas como Brevo, WhatsApp, Claro, Facebook y Google
+                    Ads. Desarrollo de módulos
+                    de envíos masivos mediante Apis de Brevo, WhatsApp y Claro, con sus respectivos módulos de
+                    contestación. Implementación de
+                    Webhooks Control de versiones con Github Pruebas exhaustivas utilizando herramientas como Postman e
+                    Insomnia
+
+
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time>02/2022 - 06/2022</time><span class="job-title">Desarrollador Full Stack - Zanahoria
+                    S.A.C (Arequipa - Perú)</span><br>
+                    Creación y desarrollo de sistemas de control para una cadena de veterinarias con múltiples sedes,
+                    que gestionan tanto al personal,
+                    clientes como al almacenamiento de productos. Desarrollo de aplicación web utilizando PHP, HTML,
+                    CSS, Javascript y MySql para
+                    proporcionar una solución integral y escalable
+
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time>11/2021 - 04/2022</time><span class="job-title"> Desarrollador Front End - Startup
+                    Todos.com (Arequipa-Perú)</span><br>
+                    Maquetación y desarrollo web Front-End utilizando tecnologías como WordPress y Elementor para crear
+                    sitios web atractivos y
+                    funcionales. Creación y mantenimiento de página web de la empresa utilizando PHP, Javascript, HTML y
+                    CSS
+
+
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time>12-2021 - 08-2022</time><span class="job-title"> Practicante - EF Soluciones
+                    (Arequipa-Perú)</span><br>
+                    Desarrollo de un chatbot para WhatsApp utilizando PHP y MySql Desarrollo e implementación de Apis
+                    Pruebas exhaustivas
+                    utilizando Postman e Insomnia Documentación detallada del desarrollo y mantenimiento del chatbot
+                    Marzo 2024
+
+
+                </div>
+            </li>
+        </ul>
     </section>
 
     <!-- Projects -->
@@ -186,42 +393,42 @@
             <div class="carousel owl-carousel">
                 <div class="card">
                     <div class="box">
-                        <img src="https://source.unsplash.com/720x600/?shopping" alt="">
+                        <img src="https://source.unsplash.com/720x600/?shopping" alt="Ecommerce">
                         <div class="text">Ecommerce</div>
                         <p>#Project Details:- Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                        <img src="https://source.unsplash.com/720x600/?portfolio" alt="">
+                        <img src="https://source.unsplash.com/720x600/?portfolio" alt="Portfolio">
                         <div class="text">Portfolio</div>
                         <p>#Project Details:- Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                        <img src="https://source.unsplash.com/720x600/?blog" alt="">
+                        <img src="https://source.unsplash.com/720x600/?blog" alt="Blog">
                         <div class="text">Blog</div>
                         <p>#Project Details:- Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                        <img src="https://source.unsplash.com/720x600/?messanger" alt="">
+                        <img src="https://source.unsplash.com/720x600/?messanger" alt="Messaging App">
                         <div class="text">Messaging App</div>
                         <p>#Project Details:- Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                        <img src="https://source.unsplash.com/720x600/?app-clone" alt="">
+                        <img src="https://source.unsplash.com/720x600/?app-clone" alt="Clone">
                         <div class="text">Clone</div>
                         <p>#Project Details:- Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                        <img src="https://source.unsplash.com/720x600/?code,demo" alt="">
+                        <img src="https://source.unsplash.com/720x600/?code,demo" alt="Demo">
                         <div class="text">Demo</div>
                         <p>#Project Details:- Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
@@ -238,60 +445,61 @@
                 <div class="column left">
                     <div class="text">Get in Touch</div>
                     <p>Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or
-                        opportunities to be a part of your visions. Email me with any questions or inquiries. I'll happy
-                        to answer your questions and set up a meeting with you.</p>
+                        opportunities to be a part of your visions. Email me with any questions or inquiries. I'll be
+                        happy to answer your questions and set up a meeting with you.</p>
                     <div class="icons">
-
-                        <a href="https://instagram.com/aistscience">
-                            <div class="row">
-                                <i class="fa-solid fa-user-large"></i>
-                                <div class="info">
-                                    <div class="head">Name</div>
-                                    <div class="sub-title"><a href="https://aistechx.com/"
-                                            style="text-decoration: none; color: #333;"> Akash Mahapatra</a></div>
-                                </div>
+                        <div class="row">
+                            <i class="fa-solid fa-user-large"></i>
+                            <div class="info">
+                                <div class="head">Name</div>
+                                <div class="sub-title"><a href="https://aistechx.com/"
+                                        style="text-decoration: none; color: #727272;">Adriana Chipana</a></div>
                             </div>
-                        </a>
-
+                        </div>
                         <div class="row">
                             <i class="fa-solid fa-location-dot"></i>
                             <div class="info">
-                                <div class="head">&nbsp;Address</div>
-                                <div class="sub-title">&nbsp;ABC, 123 Lane, India</div>
+                                <div class="head">Address</div>
+                                <div class="sub-title">Arequipa, Perú</div>
                             </div>
                         </div>
-
                         <div class="row">
                             <i class="fa-solid fa-envelope"></i>
                             <div class="info">
                                 <div class="head">Email</div>
-                                <div class="sub-title"><a href="mailto:#" style="text-decoration: none; color: #333;">
-                                        example@example.com</a></div>
+                                <div class="sub-title"><a href="mailto:adrijonas16@gmail.com"
+                                        style="text-decoration: none; color: #727272;">adrijonas16@gmail.com</a></div>
                             </div>
                         </div>
-
                         <div class="row">
                             <i class="bi bi-translate"></i>
                             <div class="info">
                                 <div class="head">Language Known</div>
-                                <div class="sub-title">Hindi, English, Odia, Bengali</div>
+                                <div class="sub-title">English, Spanish</div>
                             </div>
                         </div>
-
                         <br>
-
                         <!-- Social -->
                         <div class="social-menu">
                             <ul>
-                                <li><a href="https://github.com/akashm47"><i class="fa-brands fa-github"></i></a></li>
-                                <li><a href="https://www.linkedin.com/in/akashmahapatra/"><i
-                                            class="fa-brands fa-linkedin-in"></i></a></li>
-                                <li><a href="https://www.instagram.com/___kaaashx___/"><i
-                                            class="fa-brands fa-instagram"></i></a></li>
-                                <li><a href="https://twitter.com/___kaaashx___/"><i
-                                            class="fa-brands fa-twitter"></i></a></li>
-                                <li><a href="https://aistechx.com/" title="Get Educate with Us"><i
-                                            class="fa-solid fa-graduation-cap"></i></a></li>
+                                <li><a href="https://github.com/adrijonas16"><i class="fa-brands fa-github"></i><svg
+                                            viewBox="0 0 256 250" width="256" height="250" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                                            <path
+                                                d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z" />
+                                        </svg>
+                                    </a></li>
+                                <li><a href="www.linkedin.com/in/adriana-chipana-ampuero-b42019117"><i
+                                            class="fa-brands fa-linkedin-in"></i><svg width="256" height="256"
+                                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"
+                                            viewBox="0 0 256 256">
+                                            <path
+                                                d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157.002-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27m18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454c-.147-10.33-8.635-18.588-18.966-18.453"
+                                                fill="#0A66C2" />
+                                        </svg>
+                                    </a></li>
+
+
                             </ul>
                         </div>
                     </div>
@@ -327,12 +535,13 @@
     <!-- Footer -->
     <footer>
         <span>
-            <a href="https://www.linkedin.com/in/akashmahapatra"> Akash Mahapatra</a> | <span
+            <a href="https://www.linkedin.com/in/adriana-chipana-ampuero-b42019117">Adriana Chipana</a> | <span
                 class="far fa-copyright"></span> 2022 All Rights Reserved. Privacy Policy
         </span>
     </footer>
 
-    <script src="Js/index.js"></script>
 
-
+    <script src="./Js/index.js"></script>
 </body>
+
+</html>
