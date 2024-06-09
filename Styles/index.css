@@ -594,8 +594,12 @@ section .title::after {
   transition: all 0.3s ease;
 }
 
-.services .serv-content .card:hover {
-  background: #1e3551;
+.services .serv-content .middle:hover {
+  background: #9735af;
+}
+
+.services .serv-content .corner:hover {
+  background: #482dbe;
 }
 
 .services .serv-content .card .box {
