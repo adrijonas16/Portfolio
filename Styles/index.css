@@ -36,11 +36,6 @@ body::after {
 }
 
 
-
-
-
-
-
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .timeline  {
@@ -467,7 +462,7 @@ section .title::after {
 /* Linear Gradient */
 .home .home-content .text-3 span {
   color: white;
-  /* background: linear-gradient(135deg, #041d3d, #fff, crimson); */
+  background: linear-gradient(135deg, #041d3d, #fff, #655bf4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 500;
