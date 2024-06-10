@@ -49,7 +49,7 @@ body::after {
 .timeline .title::after {
   background: black;
   color: rgb(114, 114, 114);
-  content: "Where I worked?";
+  content: "—Where I worked ?—";
 }
 
 .job-title {
@@ -572,16 +572,12 @@ section .title::after {
   background: black;
 }
 
-.services .title::before,
-.projects .title::before {
-  background: #fff;
-}
 
 .services .title::after,
 .projects .title::after {
   background: black;
   color: rgb(114, 114, 114);
-  content: "What I Provide ?";
+  content: "—What I Provide ?";
 }
 
 .services .serv-content .card {
@@ -638,8 +634,9 @@ section .title::after {
 }
 
 .skills .title::after {
+  background: black;
   color: rgb(114, 114, 114);
-  content: "—What I Know ?—";
+  content: "—What I Provide ?—";
 }
 
 .skills .skills-content .column {
@@ -756,7 +753,9 @@ section .title::after {
 
 /*  Projects  */
 .projects .title::after {
-  content: "What I did ?";
+  background: #000000;
+  color: rgb(114, 114, 114);
+  content: "—What I did ?—";
 }
 
 .projects .carousel .card {
