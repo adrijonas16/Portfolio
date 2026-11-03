@@ -190,8 +190,8 @@
 .hero-in button {
   pointer-events: auto;
 }
-h1 {
-  font-size: clamp(56px, 11.2vw, 200px);
+#hero h1 {
+  font-size: clamp(44px, 11.2vw, 200px);
 }
 .role span {
   color: var(--mute);
