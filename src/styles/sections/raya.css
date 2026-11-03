@@ -1,0 +1,136 @@
+/* ---------- 4 en raya ---------- */
+#raya {
+  padding-block: clamp(90px, 14vh, 160px);
+}
+.raya-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: clamp(32px, 6vw, 96px);
+  align-items: center;
+}
+.raya-grid h3 {
+  font-size: clamp(40px, 5.4vw, 88px);
+}
+.raya-grid p {
+  color: var(--mute);
+  margin-top: 22px;
+  max-width: 44ch;
+}
+.raya-grid p strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.status {
+  margin-top: 28px;
+  font-size: 15px;
+  min-height: 3.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.status .px {
+  color: var(--accent);
+}
+#chaos {
+  color: var(--carmin);
+}
+.board-wrap {
+  position: relative;
+  background: var(--bg2);
+  border-radius: 22px;
+  padding: clamp(12px, 1.6vw, 20px);
+  box-shadow: 0 0 0 1px var(--line) inset;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: clamp(4px, 0.6vw, 8px);
+}
+.col {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  gap: clamp(4px, 0.6vw, 8px);
+  background: none;
+  border: 0;
+  padding: 6px 2px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font: inherit;
+  color: inherit;
+}
+.col:hover:not(:disabled),
+.col:focus-visible {
+  background: rgba(243, 236, 223, 0.06);
+}
+.col:disabled {
+  cursor: not-allowed;
+}
+.col.frozen {
+  background: rgba(140, 200, 255, 0.13);
+  box-shadow: 0 0 0 1.5px rgba(160, 210, 255, 0.6) inset;
+}
+.cell {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.25);
+}
+.chip {
+  position: absolute;
+  inset: 7%;
+  border-radius: 50%;
+}
+.chip.p1 {
+  background: var(--accent);
+  box-shadow: inset 0 -4px 0 #7d5fd6;
+}
+.chip.p2 {
+  background: var(--carmin);
+  box-shadow: inset 0 -4px 0 #93203a;
+}
+.chip.win {
+  outline: 3px solid var(--ink);
+  outline-offset: -3px;
+}
+.raya-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.legend {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  color: var(--mute);
+}
+.legend i {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: -1px;
+}
+.btn.sm {
+  padding: 10px 18px;
+  font-size: 14px;
+}
+.boom {
+  position: absolute;
+  pointer-events: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(var(--accent), rgba(224, 64, 90, 0.8) 50%, transparent 70%);
+}
+@media (max-width: 860px) {
+  .raya-grid {
+    grid-template-columns: 1fr;
+  }
+}

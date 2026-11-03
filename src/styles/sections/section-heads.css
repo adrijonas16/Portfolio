@@ -1,0 +1,25 @@
+/* ---------- section heads ---------- */
+.sh {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 34ch);
+  gap: 40px;
+  align-items: end;
+  padding-block: clamp(90px, 14vh, 160px) clamp(40px, 6vh, 64px);
+}
+.sh h2 {
+  font-size: clamp(44px, 7.4vw, 128px);
+}
+.sh p {
+  color: var(--mute);
+  font-size: 18px;
+}
+@media (max-width: 860px) {
+  .sh {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+.split-line {
+  overflow: hidden;
+  padding-bottom: 0.05em;
+}

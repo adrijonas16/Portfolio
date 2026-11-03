@@ -1,0 +1,15 @@
+@import './tokens.css';
+@import './base.css';
+@import './sections/loader.css';
+@import './sections/cursor.css';
+@import './sections/nav.css';
+@import './sections/hero.css';
+@import './sections/marquee.css';
+@import './sections/section-heads.css';
+@import './sections/bonk.css';
+@import './sections/raya.css';
+@import './sections/projects.css';
+@import './sections/model3d.css';
+@import './sections/experience.css';
+@import './sections/about.css';
+@import './sections/contact.css';

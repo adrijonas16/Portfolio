@@ -1,0 +1,21 @@
+/* Design tokens: every colour, easing and spacing value the sections share. */
+:root {
+  /* surfaces */
+  --bg: #09090b;
+  --bg2: #131316;
+  --bg3: #232328;
+
+  /* text and lines */
+  --ink: #f3ecdf;
+  --mute: #9d9a94;
+  --line: rgba(243, 236, 223, 0.14);
+
+  /* brand */
+  --accent: #b79cff;
+  --carmin: #e0405a;
+  --puna: #7fae5e;
+
+  /* motion and layout */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --g: clamp(20px, 5vw, 96px);
+}

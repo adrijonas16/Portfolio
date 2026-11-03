@@ -1,0 +1,54 @@
+/* ---------- nav ---------- */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px var(--g);
+  transition:
+    transform 0.5s var(--ease),
+    background 0.4s;
+}
+nav.hide {
+  transform: translateY(-110%);
+}
+nav.solid {
+  background: rgba(9, 9, 11, 0.94);
+}
+.brand {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand .logo {
+  width: 38px;
+  height: 26px;
+  color: var(--accent);
+  flex: none;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  font-size: 15px;
+}
+nav ul a {
+  text-decoration: none;
+  color: var(--mute);
+  transition: color 0.2s;
+}
+nav ul a:hover {
+  color: var(--ink);
+}
+@media (max-width: 760px) {
+  nav ul {
+    display: none;
+  }
+}

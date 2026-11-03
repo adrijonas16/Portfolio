@@ -1,0 +1,42 @@
+/* ---------- loader ---------- */
+#loader {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: var(--bg);
+  display: grid;
+  place-items: center;
+  clip-path: inset(0 0 0 0);
+}
+.ld {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+.ld-steps {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 64px;
+}
+.ld-steps i {
+  display: block;
+  width: 18px;
+  background: var(--bg3);
+  transition: background 0.2s;
+}
+.ld-steps i.on {
+  background: var(--accent);
+}
+.ld-txt {
+  font-size: 14px;
+  color: var(--mute);
+  display: flex;
+  gap: 18px;
+}
+#pct {
+  color: var(--ink);
+  min-width: 3ch;
+  text-align: right;
+}
