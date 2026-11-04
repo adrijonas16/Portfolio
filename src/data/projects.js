@@ -140,8 +140,8 @@ export const PROJECTS = [
   },
   {
     name: 'FixGo',
-    sub: 'SaaS y marketplace para talleres automotrices.',
-    body: 'Gestión del taller, mecánicos y clientes, con una arquitectura por capas: entidades, datos con Dapper, reglas de negocio con Unit of Work y API en ASP.NET, más un frontend en React con Tailwind.',
+    sub: 'SaaS multitenant y marketplace para talleres automotrices.',
+    body: 'Una sola plataforma para muchos talleres: arquitectura multitenant donde cada taller (tenant) ve solo sus mecánicos, clientes, vehículos y órdenes de trabajo, separados por taller en la misma base de datos. Backend por capas con Dapper, Unit of Work y API en ASP.NET, y frontend en React con Tailwind.',
     tags: [
       'React',
       'TypeScript',
@@ -150,6 +150,7 @@ export const PROJECTS = [
       'Recharts',
       'Leaflet',
       'ASP.NET Web API',
+      'Multitenant',
       'Dapper',
       'Unit of Work',
       'JWT',
