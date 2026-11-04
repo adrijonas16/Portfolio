@@ -1,0 +1,163 @@
+/* ---------- formación: camino por niveles ---------- */
+.path {
+  border-top: 1px solid var(--line);
+  padding-top: 56px;
+  margin-top: 10px;
+}
+.path-title {
+  font-size: clamp(32px, 3.6vw, 56px);
+}
+.path-sub {
+  color: var(--mute);
+  margin-top: 12px;
+  max-width: 52ch;
+}
+.path-track {
+  --progress: 0;
+  list-style: none;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 48px;
+}
+/* the rail and its fill, drawn behind the nodes */
+.path-track::before,
+.path-track::after {
+  content: '';
+  position: absolute;
+  left: 13px;
+  right: 13px;
+  top: 13px;
+  height: 3px;
+  border-radius: 3px;
+}
+.path-track::before {
+  background: repeating-linear-gradient(90deg, var(--bg3) 0 10px, transparent 10px 18px);
+}
+.path-track::after {
+  background: linear-gradient(90deg, var(--accent), #e8deff);
+  transform-origin: left;
+  transform: scaleX(var(--progress));
+  box-shadow: 0 0 18px rgba(183, 156, 255, 0.55);
+}
+.stop {
+  position: relative;
+  z-index: 1;
+}
+.node {
+  display: grid;
+  place-items: center;
+  width: 29px;
+  height: 29px;
+  border-radius: 8px;
+  background: var(--bg2);
+  border: 2px solid var(--bg3);
+  transform: rotate(45deg);
+  transition:
+    background 0.5s,
+    border-color 0.5s,
+    box-shadow 0.5s;
+}
+.node i {
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+  background: var(--bg3);
+  transition: background 0.5s;
+}
+.stop.lit .node {
+  border-color: var(--accent);
+  background: rgba(183, 156, 255, 0.14);
+}
+.stop.lit .node i {
+  background: var(--accent);
+}
+.stop.now.lit .node {
+  animation: path-pulse 1.8s ease-in-out infinite;
+}
+.stop.goal .node {
+  border-style: dashed;
+}
+.stop.goal.lit .node {
+  background: var(--accent);
+  box-shadow:
+    0 0 0 6px rgba(183, 156, 255, 0.15),
+    0 0 40px rgba(183, 156, 255, 0.6);
+}
+.stop.goal.lit .node i {
+  background: #09090b;
+}
+@keyframes path-pulse {
+  50% {
+    box-shadow: 0 0 0 8px rgba(183, 156, 255, 0.12);
+  }
+}
+.state {
+  display: inline-block;
+  margin-top: 22px;
+  font-size: 12px;
+  color: var(--mute);
+}
+.stop.done .state {
+  color: var(--puna);
+}
+.stop.now .state,
+.stop.goal .state {
+  color: var(--accent);
+}
+.stop h4 {
+  font-size: 20px;
+  font-weight: 650;
+  margin-top: 8px;
+}
+.stop p {
+  color: var(--mute);
+  margin-top: 6px;
+  font-size: 16px;
+}
+.stop p strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.stop.goal h4 {
+  font-variation-settings: 'wdth' 125;
+  font-weight: 800;
+  font-size: 24px;
+}
+@media (max-width: 900px) {
+  .path-track {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding-left: 48px;
+  }
+  .path-track::before,
+  .path-track::after {
+    left: 13px;
+    right: auto;
+    top: 13px;
+    bottom: 13px;
+    width: 3px;
+    height: auto;
+  }
+  .path-track::before {
+    background: repeating-linear-gradient(180deg, var(--bg3) 0 10px, transparent 10px 18px);
+  }
+  .path-track::after {
+    transform-origin: top;
+    transform: scaleY(var(--progress));
+  }
+  .stop .node {
+    position: absolute;
+    left: -48px;
+    top: 0;
+  }
+  .state {
+    margin-top: 2px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stop.now.lit .node {
+    animation: none;
+  }
+}

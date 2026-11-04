@@ -8,22 +8,6 @@
   display: grid;
   gap: 0;
 }
-.edu {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  border-top: 1px solid var(--line);
-  padding-top: 34px;
-  margin-top: 10px;
-}
-.edu h4 {
-  font-size: 20px;
-  font-weight: 650;
-  margin-bottom: 6px;
-}
-.edu p {
-  color: var(--mute);
-}
 .job {
   display: grid;
   grid-template-columns: minmax(0, 0.75fr) minmax(0, 2fr);

@@ -67,6 +67,10 @@ try {
   await page.waitForFunction(() => !document.querySelector('#vLoad'), null, { timeout: 60000 });
   check(true, '3D helmet loads');
 
+  await page.evaluate(() => document.querySelector('#path').scrollIntoView({ block: 'end' }));
+  await page.waitForTimeout(1500);
+  check((await page.locator('.stop.lit').count()) >= 1, 'formación: the path lights up while scrolling');
+
   for (const id of ['hero', 'productos', 'juegos', 'bonk', 'raya', 'modelado', 'trayectoria', 'sobre', 'contacto']) {
     check(await page.locator(`#${id}`).isVisible(), `section #${id} is present`);
   }

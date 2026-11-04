@@ -19,6 +19,7 @@ import { initBonk } from './sections/bonk.js';
 import { initRaya } from './sections/raya.js';
 import { initViewer3d } from './sections/viewer3d.js';
 import { initExperience } from './sections/experience.js';
+import { initPath } from './sections/path.js';
 import { initAbout } from './sections/about.js';
 import { initContact } from './sections/contact.js';
 
@@ -31,6 +32,7 @@ initBonk();
 initRaya();
 initViewer3d();
 initExperience();
+initPath();
 initAbout();
 initContact();
 

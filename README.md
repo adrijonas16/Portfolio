@@ -48,6 +48,7 @@ src/
     raya.js                Interfaz del 4 en raya
     viewer3d.js            Casco 3D (three.js en un chunk aparte, carga perezosa)
     experience.js          Experiencia y diagramas (N capas, chatbot, integraciones)
+    path.js                Formación como mapa de niveles (CIBERTEC → UTP → GameLab → mi videojuego)
     about.js, contact.js
   styles/
     tokens.css             Colores, easing y espaciado
