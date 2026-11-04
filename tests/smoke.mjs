@@ -60,8 +60,13 @@ try {
 
   await page.evaluate(() => document.querySelector('#raya').scrollIntoView());
   await page.locator('#board .col').nth(3).click();
-  await page.waitForTimeout(1200);
-  check((await page.locator('#board .chip').count()) === 2, '4 en Raya: player and machine both move');
+  const bothMoved = await page
+    .waitForFunction(() => document.querySelectorAll('#board .chip').length === 2, null, { timeout: 8000 })
+    .then(
+      () => true,
+      () => false,
+    );
+  check(bothMoved, '4 en Raya: player and machine both move');
 
   await page.evaluate(() => document.querySelector('#modelado').scrollIntoView());
   await page.waitForFunction(() => !document.querySelector('#vLoad'), null, { timeout: 60000 });
