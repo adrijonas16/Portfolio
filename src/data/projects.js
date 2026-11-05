@@ -19,7 +19,7 @@ export const PROJECTS = [
   {
     name: 'Rivals',
     sub: 'Ecommerce de ropa urbana futurista que se vende en drops de edición limitada.',
-    body: 'Catálogo con filtros por categoría, colección, talla y color, fichas de producto con variantes, carrito y cuentas de usuario. Backend en .NET 8 con arquitectura por capas (API, Application, Domain, Infrastructure), Entity Framework Core y datos de ejemplo que se cargan solos al iniciar.',
+    body: 'Drops con cuenta regresiva, descuentos por tiempo limitado, stock en vivo ("Quedan 4"), favoritos y envío gratis desde cierto monto. Precios en soles o dólares e interfaz en español o inglés. Catálogo con filtros, fichas con tallas, carrito y cuentas. Backend .NET 8 por capas (API, Application, Domain, Infrastructure) con Entity Framework Core.',
     tags: [
       'React 18',
       'TypeScript',
@@ -40,9 +40,9 @@ export const PROJECTS = [
     live: 'https://rivals-futurewear-demo.netlify.app/',
     gallery: [
       ['/img/rivals-home.webp', 'Portada de Rivals: Futurewear for the bold, con selector de drops'],
+      ['/img/rivals-drop.webp', 'Drop limitado de Rivet Collection con cuenta regresiva'],
       ['/img/rivals-destacados.webp', 'Categorías y productos destacados'],
-      ['/img/rivals-catalogo.webp', 'Catálogo del drop No Equal con filtros'],
-      ['/img/rivals-producto.webp', 'Ficha de producto con tallas y cantidad'],
+      ['/img/rivals-producto.webp', 'Ficha de producto con tallas, favoritos y envío gratis'],
     ],
   },
   {
@@ -141,7 +141,7 @@ export const PROJECTS = [
   {
     name: 'FixGo',
     sub: 'SaaS multitenant y marketplace para talleres automotrices.',
-    body: 'Una sola plataforma para muchos talleres: arquitectura multitenant donde cada taller (tenant) ve solo sus mecánicos, clientes, vehículos y órdenes de trabajo, separados por taller en la misma base de datos. Backend por capas con Dapper, Unit of Work y API en ASP.NET, y frontend en React con Tailwind.',
+    body: 'El cliente aprueba el presupuesto desde el celular. Tablero por etapas, historial por placa y un mapa donde los conductores encuentran el taller; dueño, mecánico y cliente ven cada uno lo suyo. Multitenant: cada taller ve solo sus datos dentro de la misma base. Backend por capas con Dapper, Unit of Work y ASP.NET.',
     tags: [
       'React',
       'TypeScript',
@@ -157,7 +157,16 @@ export const PROJECTS = [
       'PostgreSQL',
     ],
     repo: 'https://github.com/adrijonas16/FixGo',
-    gallery: [['/img/fixgo-banner.webp', 'Banner de FixGo: servicios automotrices claros y rápidos']],
+    deploy: 'Vercel',
+    live: 'https://fixgo-tau.vercel.app/',
+    gallery: [
+      ['/img/fixgo-home.webp', 'Portada de FixGo: el cliente aprueba la reparación desde el celular'],
+      ['/img/fixgo-dashboard.webp', 'Hoy en el taller: indicadores y tablero por etapas'],
+      ['/img/fixgo-ordenes.webp', 'Órdenes de trabajo con estado, presupuesto y detalle del vehículo'],
+      ['/img/fixgo-historial.webp', 'Historial completo del carro buscando por placa'],
+      ['/img/fixgo-mapa.webp', 'Mapa de sedes del taller'],
+      ['/img/fixgo-conductores.webp', 'Lo que ve el conductor: talleres cerca, calificaciones y emergencias 24 h'],
+    ],
   },
   {
     name: 'HuellaGo',
