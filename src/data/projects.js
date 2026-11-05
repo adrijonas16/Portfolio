@@ -181,9 +181,16 @@ export const PROJECTS = [
   {
     name: 'HuellaGo',
     sub: 'Cada paseo deja huella.',
-    body: 'Plataforma peruana para dueños de perros: mapa pet friendly, eventos, rutas de paseo, perfil de mascota y comunidad. Producto documentado de cero: 25 pantallas móviles, 19 web, roadmap y branding.',
+    body: 'Plataforma pet friendly en Arequipa: mapa de veterinarias, paseadores, hoteles y refugios, eventos con inscripción, rutas de paseo calificadas por la comunidad, adopciones y comunidades. Producto diseñado de cero, con web en Next.js y app móvil en Flutter.',
     tags: ['Next.js', 'Tailwind', 'Radix UI', 'Zustand', 'Leaflet', 'Google Maps', 'Flutter', 'Riverpod', 'Dio'],
     repo: 'https://github.com/adrijonas16/HuellaGo',
-    tm: 'huella',
+    live: 'https://huellago-sooty.vercel.app/',
+    deploy: 'Vercel',
+    gallery: [
+      ['/img/huellago-home.webp', 'Portada de HuellaGo: cada paseo deja huella, con buscador de servicios'],
+      ['/img/huellago-mapa.webp', 'Mapa pet friendly de Arequipa con veterinarias, paseadores, hoteles y refugios'],
+      ['/img/huellago-servicios.webp', 'Directorio de servicios para mascotas con reseñas'],
+      ['/img/huellago-rutas.webp', 'Rutas de paseo calificadas por la comunidad'],
+    ],
   },
 ];
