@@ -117,7 +117,7 @@ export const PROJECTS = [
   {
     name: 'Ready',
     sub: 'Sube la foto de la lista de útiles y recibe el carrito armado.',
-    body: 'La API lee la lista (foto, PDF o Word) con Claude y en la misma pasada elige del catálogo la opción económica, estándar y premium de cada útil. El cliente ve el resultado en alrededor de un minuto y lo ajusta.',
+    body: 'Tienda de útiles en Arequipa. La API lee la lista del colegio (foto, PDF o Word) con Claude y la arma del catálogo en Económico, Normal y Premium. También se puede comprar la lista ya aprobada de tu colegio o útil por útil, y sumar forrado, etiquetas y libros.',
     tags: [
       'Next.js',
       'Tailwind',
@@ -136,7 +136,17 @@ export const PROJECTS = [
     live: 'https://ready-web-gamma.vercel.app/',
     repo: 'https://github.com/adrijonas16/ready',
     repo2: 'https://github.com/adrijonas16/ready-web',
-    tm: 'ready',
+    gallery: [
+      ['/img/ready-home.webp', 'Portada de Ready: sube la foto de la lista del colegio y la armamos'],
+      [
+        '/img/ready-comprar.webp',
+        'Tres formas de comprar: foto de la lista, lista del colegio o producto por producto',
+      ],
+      ['/img/ready-listas.webp', 'Listas de colegios ya revisadas, por colegio y grado'],
+      ['/img/ready-catalogo.webp', 'Catálogo con filtros por nivel, marca, precio y ofertas'],
+      ['/img/ready-funciona.webp', 'Cómo funciona: foto, opción económica, normal o premium, y forrado'],
+      ['/img/ready-categorias.webp', 'Compra por categoría'],
+    ],
   },
   {
     name: 'FixGo',
