@@ -121,3 +121,10 @@
     max-width: 340px;
   }
 }
+.about-txt p.body strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.about-txt p.body + p.body {
+  margin-top: 16px;
+}
