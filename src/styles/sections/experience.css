@@ -275,3 +275,8 @@
     margin-inline: 0;
   }
 }
+/* hub nodes are positioned from their data-x / data-y (percent of the box) */
+.node {
+  left: calc(var(--x) * 1%);
+  top: calc(var(--y) * 1%);
+}

@@ -93,3 +93,30 @@ section {
     opacity: 1;
   }
 }
+
+/* small label above a section title, in the pixel face */
+.level {
+  color: var(--accent);
+  font-size: 15px;
+}
+.level + .h-l {
+  margin-top: 14px;
+}
+
+/* keyboard users can jump straight past the nav */
+.skip {
+  position: fixed;
+  left: 16px;
+  top: -60px;
+  z-index: 200;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #09090b;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.skip:focus {
+  top: 16px;
+}

@@ -106,3 +106,19 @@
     grid-template-columns: 1fr;
   }
 }
+/* livery swatches */
+.sw-season {
+  background: linear-gradient(135deg, #f4f7f9, #4aa3e0 55%, #ce2b37);
+}
+.sw-monza {
+  background: linear-gradient(90deg, #009246 33%, #fff 33% 66%, #ce2b37 66%);
+}
+.sw-champion {
+  background: linear-gradient(135deg, #fff5cf, #f5c542, #9a6b00);
+}
+.sw-night {
+  background: linear-gradient(135deg, #111, #3fb8c4);
+}
+.sw-chrome {
+  background: linear-gradient(135deg, #fff, #8a9196, #e6eef0);
+}

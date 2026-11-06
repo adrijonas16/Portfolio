@@ -45,7 +45,7 @@
   position: relative;
   z-index: 1;
 }
-.node {
+.path-node {
   display: grid;
   place-items: center;
   width: 29px;
@@ -59,33 +59,33 @@
     border-color 0.5s,
     box-shadow 0.5s;
 }
-.node i {
+.path-node i {
   width: 9px;
   height: 9px;
   border-radius: 2px;
   background: var(--bg3);
   transition: background 0.5s;
 }
-.stop.lit .node {
+.stop.lit .path-node {
   border-color: var(--accent);
   background: rgba(183, 156, 255, 0.14);
 }
-.stop.lit .node i {
+.stop.lit .path-node i {
   background: var(--accent);
 }
-.stop.now.lit .node {
+.stop.now.lit .path-node {
   animation: path-pulse 1.8s ease-in-out infinite;
 }
-.stop.goal .node {
+.stop.goal .path-node {
   border-style: dashed;
 }
-.stop.goal.lit .node {
+.stop.goal.lit .path-node {
   background: var(--accent);
   box-shadow:
     0 0 0 6px rgba(183, 156, 255, 0.15),
     0 0 40px rgba(183, 156, 255, 0.6);
 }
-.stop.goal.lit .node i {
+.stop.goal.lit .path-node i {
   background: #09090b;
 }
 @keyframes path-pulse {
@@ -147,7 +147,7 @@
     transform-origin: top;
     transform: scaleY(var(--progress));
   }
-  .stop .node {
+  .stop .path-node {
     position: absolute;
     left: -48px;
     top: 0;
@@ -157,7 +157,7 @@
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .stop.now.lit .node {
+  .stop.now.lit .path-node {
     animation: none;
   }
 }

@@ -9,7 +9,7 @@ export default [
     languageOptions: { ecmaVersion: 2022, sourceType: 'module', globals: globals.browser },
   },
   {
-    files: ['tests/**/*.mjs', '*.config.js'],
+    files: ['tests/**/*.mjs', '*.config.js', 'plugins/**/*.js'],
     languageOptions: { ecmaVersion: 2022, sourceType: 'module', globals: { ...globals.node, ...globals.browser } },
   },
 ];

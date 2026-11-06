@@ -134,3 +134,9 @@
     grid-template-columns: 1fr;
   }
 }
+.dot-player {
+  background: var(--accent);
+}
+.dot-machine {
+  background: var(--carmin);
+}

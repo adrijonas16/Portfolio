@@ -5,344 +5,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Adriana Chipana · Desarrolladora full stack y agentic engineer</title>
 <meta name="description" content="Portafolio de Adriana Chipana: productos completos con IA, APIs, interfaces y juegos 3D en el navegador.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -14 74 74%27%3E%3Cpath d=%27M3 42 L18 4 L33 42%27 fill=%27none%27 stroke=%27%23b79cff%27 stroke-width=%277%27/%3E%3Cpath d=%27M62 11 A15 15 0 1 0 62 33%27 fill=%27none%27 stroke=%27%23b79cff%27 stroke-width=%277%27/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#09090b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Adriana Chipana · Desarrolladora full stack y agentic engineer">
+<meta property="og:description" content="Proyectos completos con IA, juegos, modelado 3D y experiencia en .NET, React y Angular.">
+<meta property="og:url" content="https://adriana-chipana.vercel.app">
+<meta property="og:image" content="https://adriana-chipana.vercel.app/img/kimi-auto.webp">
+<link rel="canonical" href="https://adriana-chipana.vercel.app">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Silkscreen&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="loading">
-
-<div id="loader" aria-hidden="true">
-  <div class="ld">
-    <div class="ld-steps" id="steps"></div>
-    <div class="ld-txt px"><span id="ldTxt">Compilando</span><span id="pct">00</span></div>
-  </div>
-</div>
-
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<!-- @include partials/loader.html -->
 <div class="cursor"></div><div class="cursor-dot"></div>
+<!-- @include partials/nav.html -->
 
-<nav id="nav">
-  <a class="brand" href="#hero" aria-label="Inicio"><svg class="logo" viewBox="0 0 66 44" aria-hidden="true"><path d="M3 42 L18 4 L33 42" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linejoin="miter"/><path d="M62 11 A15 15 0 1 0 62 33" fill="none" stroke="currentColor" stroke-width="6.5"/></svg>Adriana Chipana</a>
-  <ul>
-    <li><a href="#productos">Proyectos</a></li>
-    <li><a href="#juegos">Juegos</a></li>
-    <li><a href="#modelado">3D</a></li>
-    <li><a href="#trayectoria">Experiencia</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-  </ul>
-</nav>
-
-<main>
-<section id="hero">
-  <canvas id="gl" aria-hidden="true"></canvas>
-  <div class="ed-wrap" id="edWrap">
-    <div class="ed" id="ed" role="img" aria-label="Editor de código escribiendo un controlador en C#, un componente de React y comandos de terminal">
-      <div class="ed-bar"><span class="dots"><i></i><i></i><i></i></span>
-        <span class="ed-tab on">ProyectosController.cs</span><span class="ed-tab">Proyectos.tsx</span><span class="ed-tab">terminal</span></div>
-      <div class="ed-body"><div class="ed-nums" id="edNums"></div><div class="ed-code" id="edCode"></div></div>
-      <div class="ed-status"><span>main</span><span id="edLang">C#</span><span id="edPos">Ln 1, Col 1</span></div>
-    </div>
-  </div>
-  <div class="hero-in wrap">
-    <div class="role">Desarrolladora full stack · Agentic engineer <span>Arequipa, Perú · remoto</span></div>
-    <h1 class="wide" aria-label="Adriana Chipana"><span class="ln" aria-hidden="true">Adriana</span><span class="ln" aria-hidden="true">Chipana</span></h1>
-    <div class="hero-row">
-      <p class="hero-p">Soy desarrolladora con 5 años de experiencia en .NET, React y Angular. Construyo productos completos por capas, dirigiendo agentes de IA y revisando cada cambio. Y en mis ratos libres, juegos.</p>
-      <div class="btns">
-        <a class="btn fill mag" href="#productos">Ver proyectos</a>
-        <a class="btn mag" href="https://github.com/adrijonas16">GitHub</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="marquee" aria-label="Tecnologías">
-  <div class="mq-track" id="mq">
-    <span>C#</span><span>ASP.NET Core</span><span>React</span><span>Angular</span><span>TypeScript</span><span>Blazor</span><span>SQL Server</span><span>PostgreSQL</span><span>three.js</span><span>GSAP</span><span>Entity Framework</span><span>Swagger</span><span>Playwright</span><span>Blender</span><span>Unity</span><span>Unreal Engine</span><span>Godot</span><span>.NET MAUI</span><span>Docker</span><span>Azure DevOps</span><span>Vercel</span><span>Railway</span><span>Render</span><span>DigitalOcean</span><span>Claude Code</span><span>Codex</span><span>ChatGPT</span>
-  </div>
-</div>
-
-<section id="productos">
-  <div class="sh wrap">
-    <h2 class="wide h-l">Proyectos independientes</h2>
-    <p>Proyectos propios, fuera de mi trabajo en empresa. Los ideo, los diseño, los construyo y los despliego yo misma en Vercel, Netlify, Railway y Render.</p>
-  </div>
-  <div class="hz" id="hz"><div class="hz-track" id="track"></div></div>
-</section>
-
-<section id="juegos">
-  <div class="sh wrap">
-    <h2 class="wide h-l">En mis ratos libres, hago juegos</h2>
-    <p>Son proyectos personales, fuera del trabajo, en el navegador, Unity, Unreal Engine y Godot. Ahora estoy en el GameLab de la UTP aprendiendo Godot, porque mi meta es publicar algún día mi propio videojuego.</p>
-  </div>
-</section>
-
-<section id="bonk" aria-label="Bonk de los Dioses">
-  <div class="bonk-stage">
-    <div class="bonk-intro" id="bonkIntro">
-      <div class="px">Proyecto personal · Nivel 1</div>
-      <h3 class="wide">Bonk de los Dioses</h3>
-    </div>
-    <div class="bonk-frame" id="bonkFrame">
-      <img src="/img/bonk-jotunheim.webp" alt="Partida en Jötunheim: Zeus rodeado de draugr, monedas y el HUD del juego">
-      <img src="/img/bonk-tartaro.webp" alt="Partida en el Tártaro: evento de erupción con rocas de lava">
-      <img src="/img/bonk-machu.webp" alt="Partida en Machu Picchu con Inti, dios andino">
-      <div class="bonk-shade"></div>
-      <div class="realm px" id="realm">Reino: <b id="realmName">Jötunheim</b></div>
-      <div class="bonk-copy" id="bonkCopy">
-        <h3 class="wide">Bonk de los Dioses<small>Roguelike 3D que hago en mis tiempos libres</small></h3>
-        <div>
-          <p>Eliges un dios entre 14 mitologías, sobrevives a hordas, subes de nivel con armas y dones al azar y vences a jefes y némesis. Modos Historia y Supervivencia, cooperativo local y online, clasificación y clanes.</p>
-          <div class="hud px">
-            <span><em>14</em> mitologías</span>
-            <span>three.js</span>
-            <span>Supabase Realtime</span>
-            <span>Pruebas con Playwright</span>
-            <span>Vercel</span>
-          </div>
-          <div class="links" style="color:var(--ink)"><a class="go" href="https://bonk-de-los-dioses.vercel.app/">Jugar ahora</a><a href="https://github.com/adrijonas16/bonk-de-los-dioses">Ver el código</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="raya" class="wrap" aria-label="4 en Raya Brutal">
-  <div class="raya-grid">
-    <div>
-      <div class="px" style="color:var(--accent);font-size:15px">Proyecto personal · Nivel 2 · jugable</div>
-      <h3 class="wide h-l" style="margin-top:14px">4 en Raya Brutal</h3>
-      <p>El clásico, con caos. Cada cuatro jugadas pasa algo: <strong>una bomba</strong> borra una ficha o <strong>el hielo</strong> congela una columna. El original tiene multijugador, poderes y mapas; aquí tienes una versión corta para jugar contra la máquina, y la completa en el botón de abajo.</p>
-      <div class="status" aria-live="polite">
-        <span class="px" id="turn">Tu turno: fichas lilas</span>
-        <span id="chaos">Próximo caos en 4 jugadas</span>
-      </div>
-      <div class="links"><a class="go" href="https://4enraya-steel.vercel.app">Jugar la versión completa</a><a href="https://github.com/adrijonas16/4enraya">Ver el código</a></div>
-    </div>
-    <div>
-      <div class="board-wrap">
-        <div class="board" id="board" role="group" aria-label="Tablero de 7 columnas"></div>
-      </div>
-      <div class="raya-foot">
-        <div class="legend"><span><i style="background:var(--accent)"></i>Tú</span><span><i style="background:var(--carmin)"></i>Máquina</span></div>
-        <button class="btn sm" id="reset">Nueva partida</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-<section id="modelado" class="wrap">
-  <div class="m3d">
-    <div class="m3d-txt">
-      <div class="px" style="color:var(--accent);font-size:15px">Modelado 3D</div>
-      <h2 class="wide h-l">Modelos que puedes girar</h2>
-      <p>También modelo en 3D. Uso Blender y 3ds Max para modelar y texturizar, Meshy AI para generar y acelerar bocetos, y llevo los modelos a la web con three.js o a motores como Unity, Unreal Engine y Godot.</p>
-      <p class="m3d-note">Este casco es mío: lo generé con Meshy AI, limpié el material y le hice cinco acabados. Arrástralo para girarlo.</p>
-      <div class="livs" id="livs" role="radiogroup" aria-label="Acabado del casco">
-        <button class="liv on" data-l="season" role="radio" aria-checked="true"><i style="background:linear-gradient(135deg,#f4f7f9,#4aa3e0 55%,#ce2b37)"></i>Original</button>
-        <button class="liv" data-l="monza" role="radio" aria-checked="false"><i style="background:linear-gradient(90deg,#009246 33%,#fff 33% 66%,#ce2b37 66%)"></i>Monza</button>
-        <button class="liv" data-l="champion" role="radio" aria-checked="false"><i style="background:linear-gradient(135deg,#fff5cf,#f5c542,#9a6b00)"></i>Oro</button>
-        <button class="liv" data-l="night" role="radio" aria-checked="false"><i style="background:linear-gradient(135deg,#111,#3fb8c4)"></i>Noche</button>
-        <button class="liv" data-l="chrome" role="radio" aria-checked="false"><i style="background:linear-gradient(135deg,#fff,#8a9196,#e6eef0)"></i>Cromo</button>
-      </div>
-      <div class="chips"><span>Blender</span><span>3ds Max</span><span>Meshy AI</span><span>three.js</span><span>Unity</span><span>Unreal Engine</span><span>Godot</span></div>
-    </div>
-    <div class="viewer" id="viewer">
-      <canvas id="v3d" aria-label="Casco 3D interactivo"></canvas>
-      <div class="v-load" id="vLoad"><span class="px">Cargando modelo</span><b id="vPct">0%</b></div>
-      <div class="v-hint">Arrastra para girar</div>
-    </div>
-  </div>
-</section>
-
-<section id="trayectoria">
-  <div class="sh wrap">
-    <h2 class="wide h-l">Experiencia</h2>
-    <p>Cinco años construyendo sistemas para los sectores educativo y financiero, en equipos ágiles. Esto es lo que hice en cada lugar.</p>
-  </div>
-  <div class="tl wrap">
-
-    <article class="job">
-      <div class="job-h"><div class="y">2025<span>– hoy</span></div><h4>IMB Institute</h4><div class="rl">Analista desarrolladora</div></div>
-      <div class="job-b">
-        <p class="job-lead">Construí desde cero el CRM comercial del instituto con una arquitectura en N capas: API, negocio, datos y modelos separados, con patrón Repositorio y Unit of Work e inyección de dependencias. Lo preparé para funcionar como multiempresa (multitenant). Además, hago QA: reviso el código del equipo y pruebo cada cambio antes de producción.</p>
-        <ul class="did">
-          <li>Gestión de leads, oportunidades y proceso de venta con historial de estados y transiciones controladas.</li>
-          <li>Cobranza: planes de pago, cuotas y registro de pagos; inversiones, descuentos y venta cruzada.</li>
-          <li>Catálogo de programas con estructura curricular, docentes, horarios y certificados.</li>
-          <li>Importación de prospectos desde LinkedIn, roles y permisos por área, módulo y formulario, y login con JWT.</li>
-          <li>Migración de SQL Server a PostgreSQL manteniendo ambos motores en operación.</li>
-          <li>Me encargo de la publicación: contenedores Docker con Nginx en DigitalOcean.</li>
-          <li>QA y revisión de código: reviso pull requests, pruebo endpoints con Postman e Insomnia y automatizo pruebas de los flujos con Playwright antes de cada pase.</li>
-        </ul>
-        <div class="arch-t">Arquitectura en N capas</div>
-        <div class="arch" aria-label="Arquitectura en N capas del sistema">
-          <div class="layer"><b>Interfaz</b><span>React 19 · TypeScript · Ant Design · Vite</span></div>
-          <div class="layer"><b>API</b><span>ASP.NET Core Web API · JWT · Swagger / OpenAPI</span></div>
-          <div class="layer"><b>Negocio</b><span>Servicios por módulo: ventas, cobranza, seguridad, configuración</span></div>
-          <div class="layer"><b>Datos</b><span>Repositorio genérico + Unit of Work · Entity Framework Core</span></div>
-          <div class="layer"><b>Modelos</b><span>Entidades y DTOs compartidos entre capas</span></div>
-          <div class="layer db"><b>Base de datos</b><span>SQL Server → PostgreSQL</span></div>
-          <div class="layer ops"><b>Publicación</b><span>Docker · Nginx · DigitalOcean</span></div>
-        </div>
-        <div class="chips"><span>C#</span><span>ASP.NET Core</span><span>Entity Framework Core</span><span>Swagger</span><span>JWT</span><span>React 19</span><span>TypeScript</span><span>Ant Design</span><span>SQL Server</span><span>PostgreSQL</span><span>Docker</span><span>Nginx</span><span>DigitalOcean</span><span>Postman</span><span>Insomnia</span><span>GitHub</span></div>
-      </div>
-    </article>
-
-    <article class="job">
-      <div class="job-h"><div class="y">2024<span>– 2026</span></div><h4>COOPAC KORI</h4><div class="rl">Analista desarrolladora</div></div>
-      <div class="job-b">
-        <p class="job-lead">Sistemas internos de una cooperativa de ahorro y crédito, donde cada error se nota en el dinero de alguien.</p>
-        <ul class="did">
-          <li>Mantenimiento de los sistemas existentes, separando procesos en microservicios para que cada uno se despliegue y escale por su cuenta.</li>
-          <li>Desarrollé una app de gestión de movilidades que sigue los procesos de pago del banco.</li>
-          <li>Sistemas empresariales con C#, Blazor, ASP.NET y SQL Server, y apps multiplataforma con .NET MAUI.</li>
-          <li>Implementé reportes operativos y mantuve servicios en producción.</li>
-          <li>Versiones y trabajo en equipo con Azure DevOps.</li>
-        </ul>
-        <div class="chips"><span>Microservicios</span><span>C#</span><span>Blazor</span><span>ASP.NET</span><span>.NET MAUI</span><span>SQL Server</span><span>Azure DevOps</span></div>
-      </div>
-    </article>
-
-    <article class="job">
-      <div class="job-h"><div class="y">2024<span>marzo – junio</span></div><h4>ISP Corp</h4><div class="rl">Desarrolladora full stack</div></div>
-      <div class="job-b split">
-        <div>
-          <p class="job-lead">Hice el chatbot de atención por WhatsApp en PHP puro, sin frameworks: el webhook recibe cada mensaje, guarda la conversación en MySQL y responde según el menú y el estado del cliente.</p>
-          <ul class="did">
-            <li>Flujo de menús para soporte, pagos y planes, con derivación a un asesor.</li>
-            <li>APIs empresariales implementadas y documentadas.</li>
-            <li>Pruebas funcionales de cada flujo antes de salir a producción.</li>
-          </ul>
-          <div class="chips"><span>PHP puro</span><span>MySQL</span><span>WhatsApp API</span><span>Webhooks</span></div>
-        </div>
-        <figure class="chat" aria-label="Ilustración de una conversación con el chatbot">
-          <div class="chat-top"><i></i><div><b>Asistente ISP</b><em>en línea</em></div></div>
-          <div class="chat-body" id="chat">
-            <div class="msg me">Hola, no tengo internet</div>
-            <div class="msg bot">¡Hola! 👋 Soy el asistente virtual. Elige una opción:<br>1. Soporte técnico<br>2. Pagos<br>3. Planes</div>
-            <div class="msg me">1</div>
-            <div class="msg bot">Escribe tu número de contrato y reviso el estado de tu servicio.</div>
-            <div class="msg me">10482</div>
-            <div class="msg bot">Encontré una incidencia en tu zona. Te derivo con un asesor 🧑‍💻</div>
-          </div>
-          <figcaption>Ilustración del flujo</figcaption>
-        </figure>
-      </div>
-    </article>
-
-    <article class="job">
-      <div class="job-h"><div class="y">2022<span>– 2024</span></div><h4>BSG Institute</h4><div class="rl">Desarrolladora full stack</div></div>
-      <div class="job-b split">
-        <div>
-          <p class="job-lead">Conecté la plataforma del instituto con los canales donde están sus alumnos: correo, WhatsApp, SMS y redes, con envíos masivos que salen solos y webhooks que traen las respuestas de vuelta.</p>
-          <ul class="did">
-            <li>Módulos de envíos masivos por correo (Brevo), WhatsApp y SMS (Claro).</li>
-            <li>Integración de APIs de Facebook y Google Ads para campañas y leads.</li>
-            <li>Webhooks para estados de entrega y respuestas, con APIs documentadas y probadas.</li>
-            <li>Aplicaciones web con ASP.NET, Angular y TypeScript.</li>
-          </ul>
-        </div>
-        <div class="hub" aria-label="Integraciones de la plataforma">
-          <svg viewBox="0 0 400 300" aria-hidden="true"><g class="wires"></g></svg>
-          <div class="node core" style="left:50%;top:50%">Plataforma<br><small>ASP.NET + Angular</small></div>
-          <div class="node" style="left:16%;top:16%">Brevo<small>correo masivo</small></div>
-          <div class="node" style="left:84%;top:16%">WhatsApp<small>mensajes</small></div>
-          <div class="node" style="left:10%;top:72%">Claro<small>SMS</small></div>
-          <div class="node" style="left:90%;top:72%">Facebook<small>leads</small></div>
-          <div class="node" style="left:50%;top:88%">Google Ads<small>campañas</small></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="job mini">
-      <div class="job-h"><div class="y">2022<span>feb – ago</span></div><h4>Zanahoria S.A.C.</h4><div class="rl">Desarrolladora full stack</div></div>
-      <div class="job-b"><p>Sistema de gestión para una cadena de veterinarias con varias sedes: personal, clientes y almacén, con PHP, JavaScript y MySQL.</p></div>
-    </article>
-    <article class="job mini">
-      <div class="job-h"><div class="y">2021<span>– 2022</span></div><h4>Todos.com</h4><div class="rl">Desarrolladora front-end</div></div>
-      <div class="job-b"><p>Sitios web empresariales con WordPress, Elementor, PHP, JavaScript, HTML y CSS.</p><div class="links"><a href="https://www.todos.com.pe/">Ver todos.com.pe</a></div></div>
-    </article>
-
-    <div class="path" id="path" aria-label="Formación y metas">
-      <h3 class="path-title wide">Formación</h3>
-      <p class="path-sub">Un camino por niveles: lo que ya completé, lo que estoy cursando y a dónde voy.</p>
-      <ol class="path-track">
-        <li class="stop done">
-          <span class="node" aria-hidden="true"><i></i></span>
-          <span class="state px">Completado</span>
-          <h4>CIBERTEC</h4>
-          <p>Profesional técnico en Computación e Informática. <strong>Titulada</strong> (2018–2021).</p>
-        </li>
-        <li class="stop now">
-          <span class="node" aria-hidden="true"><i></i></span>
-          <span class="state px">En curso</span>
-          <h4>Universidad Tecnológica del Perú</h4>
-          <p>Convalidando cursos para la carrera universitaria, sobre la base de mi título técnico.</p>
-        </li>
-        <li class="stop now">
-          <span class="node" aria-hidden="true"><i></i></span>
-          <span class="state px">En curso · certificación</span>
-          <h4>GameLab UTP</h4>
-          <p>Programa de videojuegos de la UTP: diseño y desarrollo de juegos con Godot, para obtener el certificado.</p>
-        </li>
-        <li class="stop goal">
-          <span class="node" aria-hidden="true"><i></i></span>
-          <span class="state px">Nivel final</span>
-          <h4>Mi propio videojuego</h4>
-          <p>La meta: publicar algún día un juego mío. Cada proyecto de juego y el GameLab son pasos hacia ahí.</p>
-        </li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<section id="sobre" class="wrap">
-  <div class="about">
-    <div class="photo"><img src="/img/adriana.webp" alt="Retrato de Adriana Chipana"></div>
-    <div class="about-txt">
-      <p class="lead" id="lead">Me gusta llevar una idea de punta a punta. Trabajo a diario con Claude Code, Codex y ChatGPT, con una regla simple: la IA prepara, la persona decide.</p>
-      <p class="body">Trabajo como <strong>agentic engineer</strong>: yo defino el problema, la arquitectura y las pruebas, y dirijo a agentes como Claude Code y Codex para construir más rápido. Reviso cada cambio, lo pruebo con Playwright y decido qué entra. También construyo productos con agentes dentro, como Oficinita, que orquesta agentes con aprobación humana. Así hice la mayoría de mis proyectos independientes, y estoy certificada como Claude Certified Architect.</p>
-      <p class="body">Por eso PostulaAI nunca inventa experiencia que no escribiste, y Oficinita no envía nada sin tu clic. Hoy trabajo como analista desarrolladora en IMB Institute, y en 2026 pasé por el programa Nerdery de Ravn, rotando por frontend, backend, QA, diseño y producto.</p>
-      <div class="stack">
-        <div><h5>Backend</h5><ul><li>C#, ASP.NET Core, Blazor</li><li>Entity Framework Core, Dapper</li><li>Swagger, JWT, FluentValidation</li><li>NestJS, Prisma, Node.js, PHP</li><li>APIs REST, webhooks, SignalR</li><li>Microservicios, N capas</li></ul></div>
-        <div><h5>Frontend y móvil</h5><ul><li>React, Next.js, Angular</li><li>TypeScript, Tailwind, Ant Design</li><li>TanStack Query, Zustand</li><li>three.js, GSAP</li><li>.NET MAUI, Flutter, React Native</li></ul></div>
-        <div><h5>IA en mi día a día</h5><ul><li>Claude Code, Codex</li><li>ChatGPT, Claude API</li><li>Prompts y evaluaciones</li></ul></div>
-        <div><h5>3D y juegos</h5><ul><li>Blender, 3ds Max</li><li>Meshy AI</li><li>Unity, Unreal Engine, Godot</li><li>three.js</li></ul></div>
-        <div><h5>Despliegue</h5><ul><li>Vercel, Netlify, Railway, Render</li><li>DigitalOcean, Supabase</li><li>Docker, Nginx</li><li>Cloudflare, AWS S3</li></ul></div>
-        <div><h5>Datos y calidad</h5><ul><li>SQL Server, PostgreSQL, MySQL</li><li>Git, GitHub, Azure DevOps</li><li>Pruebas E2E con Playwright</li><li>Vitest, Cypress</li><li>Postman, Insomnia</li><li>Code review y QA</li></ul></div>
-      </div>
-      <div class="certs">
-        <h5>Certificaciones de Anthropic</h5>
-        <a class="cert" href="https://www.credly.com/badges/fee79a6e-d05b-4893-be70-75093cb0d0c0"><span class="cert-mark">P</span><span><b>Claude Certified Architect: Professional</b><em>Emitida el 20 de septiembre de 2026</em></span></a>
-        <a class="cert" href="https://www.credly.com/badges/8f84efeb-bb9c-416d-9cd1-d74d4e9b1d17"><span class="cert-mark">F</span><span><b>Claude Certified Architect: Foundations</b><em>Emitida el 14 de septiembre de 2026</em></span></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contacto" class="wrap">
-  <div class="ct">
-    <h2 class="wide h-l">Hablemos</h2>
-    <p style="color:var(--mute);margin-top:28px;max-width:44ch;font-size:clamp(18px,1.5vw,22px)">¿Tienes un producto, un puesto o un juego en mente? Escríbeme y te respondo.</p>
-    <div class="ct-row">
-      <div>
-        <a class="mail" id="mail" href="mailto:adrijonas16@gmail.com">adrijonas16@gmail.com</a>
-        <div class="copy-note" id="copyNote" aria-live="polite"></div>
-      </div>
-      <div class="btns">
-        <button class="btn fill mag" id="copyBtn">Copiar correo</button>
-        <a class="btn mag" href="https://github.com/adrijonas16">GitHub</a>
-      </div>
-    </div>
-  </div>
-  <footer><span>Adriana Chipana · Desarrolladora full stack y agentic engineer</span><a href="https://github.com/adrijonas16" style="text-decoration:none">github.com/adrijonas16</a></footer>
-</section>
+<main id="contenido">
+  <!-- @include partials/hero.html -->
+  <!-- @include partials/marquee.html -->
+  <!-- @include partials/projects.html -->
+  <!-- @include partials/games-intro.html -->
+  <!-- @include partials/bonk.html -->
+  <!-- @include partials/raya.html -->
+  <!-- @include partials/model3d.html -->
+  <!-- @include partials/experience.html -->
+  <!-- @include partials/about.html -->
+  <!-- @include partials/contact.html -->
 </main>
+
 <script type="module" src="/src/main.js"></script>
 </body>
 </html>

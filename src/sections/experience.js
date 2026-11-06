@@ -37,7 +37,11 @@ function initIntegrationHub() {
   if (!hub) return;
   const wires = $('.wires', hub);
   const [cx, cy] = [200, 150]; // centre of the 400x300 viewBox
-  const nodes = $$('.node:not(.core)', hub).map((n) => [parseFloat(n.style.left) * 4, parseFloat(n.style.top) * 3]);
+  $$('.node', hub).forEach((n) => {
+    n.style.setProperty('--x', n.dataset.x);
+    n.style.setProperty('--y', n.dataset.y);
+  });
+  const nodes = $$('.node:not(.core)', hub).map((n) => [Number(n.dataset.x) * 4, Number(n.dataset.y) * 3]);
   wires.innerHTML = nodes
     .map(([x, y], i) => {
       const [from, to] =

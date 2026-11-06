@@ -1,0 +1,23 @@
+<section id="modelado" class="wrap">
+  <div class="m3d">
+    <div class="m3d-txt">
+      <div class="level px">Modelado 3D</div>
+      <h2 class="wide h-l">Modelos que puedes girar</h2>
+      <p>También modelo en 3D. Uso Blender y 3ds Max para modelar y texturizar, Meshy AI para generar y acelerar bocetos, y llevo los modelos a la web con three.js o a motores como Unity, Unreal Engine y Godot.</p>
+      <p class="m3d-note">Este casco es mío: lo generé con Meshy AI, limpié el material y le hice cinco acabados. Arrástralo para girarlo.</p>
+      <div class="livs" id="livs" role="radiogroup" aria-label="Acabado del casco">
+        <button class="liv on" data-l="season" role="radio" aria-checked="true"><i class="sw sw-season"></i>Original</button>
+        <button class="liv" data-l="monza" role="radio" aria-checked="false"><i class="sw sw-monza"></i>Monza</button>
+        <button class="liv" data-l="champion" role="radio" aria-checked="false"><i class="sw sw-champion"></i>Oro</button>
+        <button class="liv" data-l="night" role="radio" aria-checked="false"><i class="sw sw-night"></i>Noche</button>
+        <button class="liv" data-l="chrome" role="radio" aria-checked="false"><i class="sw sw-chrome"></i>Cromo</button>
+      </div>
+      <div class="chips"><span>Blender</span><span>3ds Max</span><span>Meshy AI</span><span>three.js</span><span>Unity</span><span>Unreal Engine</span><span>Godot</span></div>
+    </div>
+    <div class="viewer" id="viewer">
+      <canvas id="v3d" aria-label="Casco 3D interactivo"></canvas>
+      <div class="v-load" id="vLoad"><span class="px">Cargando modelo</span><b id="vPct">0%</b></div>
+      <div class="v-hint">Arrastra para girar</div>
+    </div>
+  </div>
+</section>

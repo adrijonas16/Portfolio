@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite';
+import htmlPartials from './plugins/html-partials.js';
 
 export default defineConfig({
+  plugins: [htmlPartials()],
   build: {
     // three.js (~690 kB) is a lazy chunk that only loads near the 3D section
     chunkSizeWarningLimit: 800,

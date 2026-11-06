@@ -9,9 +9,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "format": "prettier --write \"src/**/*.{js,css}\" \"tests/**/*.mjs\" index.html",
+    "format": "prettier --write \"src/**/*.{js,css}\" \"tests/**/*.mjs\" \"plugins/**/*.js\"",
     "format:check": "prettier --check \"src/**/*.{js,css}\" \"tests/**/*.mjs\"",
-    "test": "node --test tests/connect4.test.mjs && node tests/smoke.mjs"
+    "test": "node --test tests/*.test.mjs && node tests/smoke.mjs"
   },
   "dependencies": {
     "gsap": "^3.13.0",
