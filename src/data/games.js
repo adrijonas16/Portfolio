@@ -13,7 +13,6 @@ export const GAMES = [
     tagline: 'Roguelike 3D gratis en el navegador, sin descargas.',
     body: 'Eliges un dios entre 91 de 14 tradiciones, sobrevives a hordas, subes de nivel con armas y dones al azar y vences a jefes y némesis. Tiene modo Historia y Supervivencia, cooperativo local y online, tienda, misiones, clasificación y clanes.',
     play: 'https://bonk-de-los-dioses.vercel.app/',
-    repo: 'https://github.com/adrijonas16/bonk-de-los-dioses',
     stack: ['three.js', 'JavaScript', 'Supabase Realtime', 'Playwright', 'Vercel'],
     shots: [
       ['/img/bonk-jotunheim.webp', 'Partida en Jötunheim: Zeus rodeado de draugr, monedas y el HUD'],
@@ -41,7 +40,6 @@ export const GAMES = [
     tagline: 'El clásico de siempre, con poderes, hielo, terremotos y siete tableros.',
     body: 'Cada pocas jugadas pasa algo: una bomba borra una ficha, el hielo congela una columna o tiembla el tablero. Juega contra la IA en tres niveles, con alguien en el mismo dispositivo o online con un amigo.',
     play: 'https://4enraya-steel.vercel.app',
-    repo: 'https://github.com/adrijonas16/4enraya',
     stack: ['JavaScript', 'HTML', 'CSS', 'IA por niveles', 'Vercel'],
     embed: true,
     shots: [

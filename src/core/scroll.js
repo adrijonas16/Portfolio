@@ -39,6 +39,18 @@ export function releaseScroll() {
   ScrollTrigger.refresh();
 }
 
+/**
+ * Opening another game, job or page of the book changes the page height. Recalculate every
+ * ScrollTrigger when that happens, or the ones further down (like "Hablemos") never fire.
+ */
+export function watchLayout(root = document.body) {
+  let timer;
+  new ResizeObserver(() => {
+    clearTimeout(timer);
+    timer = setTimeout(() => ScrollTrigger.refresh(), 150);
+  }).observe(root);
+}
+
 /** In-page anchors glide instead of jumping. */
 export function initAnchors() {
   $$('a[href^="#"]').forEach((a) =>

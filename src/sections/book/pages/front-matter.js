@@ -31,7 +31,6 @@ export function lastPage() {
   return `<div class="pg pg-intro pg-end">
     <p class="pg-kicker">Fin del libro</p>
     <p class="pg-lead">Hay más en camino: juegos en Godot, Unity y Unreal, y nuevos modelos 3D.</p>
-    <p>Todo el código está en <a href="https://github.com/adrijonas16" target="_blank" rel="noopener">github.com/adrijonas16</a>.</p>
     <button class="pg-btn ghost" data-goto="toc">Volver al índice</button>
   </div>`;
 }

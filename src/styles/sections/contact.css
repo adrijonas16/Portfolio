@@ -4,8 +4,8 @@
   overflow: hidden;
 }
 .ct h2 {
-  /* 'Hablemos' in the wide display face is ~6.4em long: 13vw keeps it inside the content width */
-  font-size: clamp(44px, 13vw, 240px);
+  /* 'Hablemos' in the wide display face is ~6.4em long: 9vw keeps it well inside the content width */
+  font-size: clamp(40px, 9vw, 150px);
   line-height: 0.9;
   max-width: 100%;
   overflow-wrap: anywhere;

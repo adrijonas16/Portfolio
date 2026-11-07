@@ -7,7 +7,7 @@
   padding-block: clamp(90px, 14vh, 160px) clamp(40px, 6vh, 64px);
 }
 .sh h2 {
-  font-size: clamp(44px, 7.4vw, 128px);
+  font-size: clamp(34px, 5vw, 84px);
 }
 .sh p {
   color: var(--mute);
@@ -21,5 +21,7 @@
 }
 .split-line {
   overflow: hidden;
-  padding-bottom: 0.05em;
+  /* room for descenders (g, p, q) so the reveal mask doesn't cut them */
+  padding-bottom: 0.18em;
+  margin-bottom: -0.13em;
 }

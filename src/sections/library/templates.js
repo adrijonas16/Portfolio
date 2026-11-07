@@ -45,7 +45,6 @@ function playablePage(g) {
         <div><dt>Hecho con</dt><dd>${g.engine}</dd></div>
         <div><dt>Logros</dt><dd>${g.achievements.length} de ${g.achievements.length}</dd></div>
       </dl>
-      <a class="lib-code" href="${g.repo}" target="_blank" rel="noopener">Ver el código</a>
     </div>
     <div class="lib-body">
       <div class="lib-main">

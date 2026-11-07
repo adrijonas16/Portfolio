@@ -1,7 +1,7 @@
 /**
  * Independent projects, in display order. Edit this list to add a project.
  * name, type (short label in the index), sub (one-line pitch), body (what it is),
- * did (what I built), tags, deploy, live, repo/repo2, gallery [[src, alt]] or tm (typographic cover).
+ * did (what I built), tags, deploy, live, gallery [[src, alt]] or tm (typographic cover).
  */
 export const PROJECTS = [
   {
@@ -18,7 +18,6 @@ export const PROJECTS = [
     tags: ['three.js', 'GSAP', 'ScrollTrigger', 'SplitText', 'Lenis', 'Vite', 'i18n'],
     deploy: 'Vercel',
     live: 'https://kimi-antonelli-orcin.vercel.app/',
-    repo: 'https://github.com/adrijonas16/kimi-antonelli',
     gallery: [
       ['/img/kimi-auto.webp', 'Secuencia del auto de F1 en 3D: casco puesto y semáforo de largada'],
       ['/img/kimi-flatout.webp', 'El auto acelerando en la pista generada con three.js'],
@@ -91,7 +90,6 @@ export const PROJECTS = [
       'Docker',
       'Claude API',
     ],
-    repo: 'https://github.com/adrijonas16/PostulaAI',
     tm: 'postula',
   },
   {
@@ -106,7 +104,6 @@ export const PROJECTS = [
     sub: 'Un edificio pixel art donde agentes de IA trabajan por ti, y nada sale sin tu aprobación.',
     body: 'Orquesta agentes de código para correo, empleo y programación. Leen, analizan y preparan; enviar un correo, postular o hacer push solo ocurre después de tu clic. Todo queda en un registro de auditoría.',
     tags: ['Node.js', 'Express', 'Claude Code', 'Codex CLI', 'IMAP', 'Nodemailer', 'Git worktrees', 'Local-first'],
-    repo: 'https://github.com/adrijonas16/Oficina',
     gallery: [
       ['/img/oficina-edificio.webp', 'Vista general: un edificio pixel art con un piso por área de trabajo'],
       ['/img/oficina-correo.webp', 'Piso de correo: los agentes clasifican y resumen'],
@@ -141,7 +138,6 @@ export const PROJECTS = [
       'Cloudflare R2',
     ],
     deploy: 'Vercel (web) · Railway (API y PostgreSQL) · Cloudflare R2 (imágenes) · Cloudflare (DNS y SSL)',
-    repo: 'https://github.com/adrijonas16/urbex2',
     live: 'https://urbexcompany.com',
     gallery: [
       ['/img/urbex-web-home.webp', 'Web de Urbex: portada con buscador y contadores de lugares, países y deportes'],
@@ -180,8 +176,6 @@ export const PROJECTS = [
     ],
     deploy: 'Vercel (web) · Render (API) · almacenamiento S3',
     live: 'https://ready-web-gamma.vercel.app/',
-    repo: 'https://github.com/adrijonas16/ready',
-    repo2: 'https://github.com/adrijonas16/ready-web',
     gallery: [
       ['/img/ready-home.webp', 'Portada de Ready: sube la foto de la lista del colegio y la armamos'],
       [
@@ -219,7 +213,6 @@ export const PROJECTS = [
       'JWT',
       'PostgreSQL',
     ],
-    repo: 'https://github.com/adrijonas16/FixGo',
     deploy: 'Vercel',
     live: 'https://fixgo-tau.vercel.app/',
     gallery: [
@@ -242,7 +235,6 @@ export const PROJECTS = [
     sub: 'Cada paseo deja huella.',
     body: 'Plataforma pet friendly en Arequipa: mapa de veterinarias, paseadores, hoteles y refugios, eventos con inscripción, rutas de paseo calificadas por la comunidad, adopciones y comunidades. Producto diseñado de cero, con web en Next.js y app móvil en Flutter.',
     tags: ['Next.js', 'Tailwind', 'Radix UI', 'Zustand', 'Leaflet', 'Google Maps', 'Flutter', 'Riverpod', 'Dio'],
-    repo: 'https://github.com/adrijonas16/HuellaGo',
     live: 'https://huellago-sooty.vercel.app/',
     deploy: 'Vercel',
     gallery: [

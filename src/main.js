@@ -6,7 +6,7 @@
  */
 import './styles/index.css';
 
-import { startAtTop, initAnchors, releaseScroll, ScrollTrigger } from './core/scroll.js';
+import { startAtTop, initAnchors, releaseScroll, watchLayout, ScrollTrigger } from './core/scroll.js';
 import { initGrain } from './core/grain.js';
 import { initCursor } from './core/cursor.js';
 import { initNav, initMarquee, initHeadings } from './core/chrome.js';
@@ -38,6 +38,7 @@ initNav();
 initMarquee();
 initHeadings();
 initAnchors();
+watchLayout();
 initCursor();
 
 waitForAssets().then(() => {

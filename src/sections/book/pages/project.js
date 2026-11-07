@@ -52,11 +52,6 @@ function mosaic(p, i) {
 function links(p) {
   const out = [];
   if (p.live) out.push(`<a class="pg-btn go" href="${p.live}" target="_blank" rel="noopener">Ver sitio en vivo</a>`);
-  if (p.repo)
-    out.push(
-      `<a class="pg-btn ghost" href="${p.repo}" target="_blank" rel="noopener">${p.repo2 ? 'Código backend' : 'Ver el código'}</a>`,
-    );
-  if (p.repo2) out.push(`<a class="pg-btn ghost" href="${p.repo2}" target="_blank" rel="noopener">Código frontend</a>`);
   if (!p.live) out.push('<span class="pg-note">Demo en vivo próximamente</span>');
   return out.join('');
 }
