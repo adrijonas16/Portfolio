@@ -1,7 +1,18 @@
-/** Independent projects shown in the horizontal gallery. Edit this list to add a project. */
+/**
+ * Independent projects, in display order. Edit this list to add a project.
+ * name, type (short label in the index), sub (one-line pitch), body (what it is),
+ * did (what I built), tags, deploy, live, repo/repo2, gallery [[src, alt]] or tm (typographic cover).
+ */
 export const PROJECTS = [
   {
     name: 'Kimi Antonelli',
+    type: 'Sitio interactivo',
+    did: [
+      'Diseñé y programé las escenas guiadas por scroll con GSAP, ScrollTrigger y SplitText.',
+      'Armé la experiencia 3D en three.js: un casco con cinco diseños y un auto sobre una pista generada.',
+      'Traduje el sitio a español, inglés e italiano.',
+      'Pausé el render cuando el 3D sale de pantalla para que el sitio vaya fluido.',
+    ],
     sub: 'Sitio tributo con scroll cinematográfico, casco 3D configurable y tres idiomas.',
     body: 'Escenas guiadas por scroll con GSAP y ScrollTrigger, un casco 3D con cinco diseños que puedes girar, un auto de F1 sobre una pista generada en three.js y una intro tipo semáforo de largada. Disponible en español, inglés e italiano; el render se pausa cuando no hay 3D en pantalla.',
     tags: ['three.js', 'GSAP', 'ScrollTrigger', 'SplitText', 'Lenis', 'Vite', 'i18n'],
@@ -18,6 +29,13 @@ export const PROJECTS = [
   },
   {
     name: 'Rivals',
+    type: 'Ecommerce',
+    did: [
+      'Diseñé la tienda y el sistema de drops con cuenta regresiva y stock en vivo.',
+      'Construí el backend en .NET 8 por capas con Entity Framework Core y PostgreSQL.',
+      'Implementé cuentas con JWT y BCrypt, validaciones con FluentValidation y documentación con Swagger.',
+      'Agregué precios en soles o dólares e interfaz en dos idiomas.',
+    ],
     sub: 'Ecommerce de ropa urbana futurista que se vende en drops de edición limitada.',
     body: 'Drops con cuenta regresiva, descuentos por tiempo limitado, stock en vivo ("Quedan 4"), favoritos y envío gratis desde cierto monto. Precios en soles o dólares e interfaz en español o inglés. Catálogo con filtros, fichas con tallas, carrito y cuentas. Backend .NET 8 por capas (API, Application, Domain, Infrastructure) con Entity Framework Core.',
     tags: [
@@ -47,6 +65,13 @@ export const PROJECTS = [
   },
   {
     name: 'PostulaAI',
+    type: 'Herramienta con IA',
+    did: [
+      'Diseñé el análisis requisito por requisito con la API de Claude.',
+      'Validé cada respuesta de la IA contra un esquema para que no invente datos.',
+      'Construí la API en ASP.NET Core y el frontend en React con TanStack Query y Zod.',
+      'Lo empaqueté con Docker y lo probé con Vitest.',
+    ],
     sub: 'Compara tu perfil con una vacante y te dice, con evidencia, en qué coincides y qué te falta.',
     body: 'Importa tu CV, analiza la vacante requisito por requisito y redacta un resumen y una carta adaptados. Política de no invención: cada fortaleza cita tu perfil y lo que no está respaldado se reporta como brecha. Las salidas se validan contra un esquema.',
     tags: [
@@ -71,6 +96,13 @@ export const PROJECTS = [
   },
   {
     name: 'Oficinita',
+    type: 'Agentes de IA',
+    did: [
+      'Orquesté agentes de Claude Code y Codex para correo, empleo y programación.',
+      'Diseñé el flujo de aprobación: nada se envía sin tu clic.',
+      'Conecté el correo con IMAP y Nodemailer y aislé cada tarea de código en git worktrees.',
+      'Cada acción queda en un registro de auditoría.',
+    ],
     sub: 'Un edificio pixel art donde agentes de IA trabajan por ti, y nada sale sin tu aprobación.',
     body: 'Orquesta agentes de código para correo, empleo y programación. Leen, analizan y preparan; enviar un correo, postular o hacer push solo ocurre después de tu clic. Todo queda en un registro de auditoría.',
     tags: ['Node.js', 'Express', 'Claude Code', 'Codex CLI', 'IMAP', 'Nodemailer', 'Git worktrees', 'Local-first'],
@@ -85,6 +117,13 @@ export const PROJECTS = [
   },
   {
     name: 'Urbex',
+    type: 'Web y app móvil',
+    did: [
+      'Llevé el producto por tres versiones: Flutter con .NET, y luego Next.js, NestJS y Expo.',
+      'Publiqué la web en Vercel, la API y la base en Railway y las imágenes en Cloudflare R2.',
+      'Integré mapas con Leaflet, chat en tiempo real con Socket.IO y pagos con Stripe.',
+      'Documenté los componentes en Storybook.',
+    ],
     sub: 'Lugares que casi nadie conoce, en 196 países.',
     body: 'Web y app para descubrir edificios abandonados y rincones fuera de ruta. Tres iteraciones: app en Flutter con backend .NET, y luego web en Next.js, API en NestJS y app móvil con Expo. Más de 5.500 lugares reales.',
     tags: [
@@ -116,6 +155,13 @@ export const PROJECTS = [
   },
   {
     name: 'Ready',
+    type: 'Ecommerce con IA',
+    did: [
+      'Construí la API en ASP.NET Core 8 con Dapper y PostgreSQL.',
+      'Usé Claude para leer la lista en foto, PDF o Word y armar el carrito en tres presupuestos.',
+      'Sumé actualizaciones en tiempo real con SignalR y archivos en S3.',
+      'Publiqué la web en Vercel y la API en Render.',
+    ],
     sub: 'Sube la foto de la lista de útiles y recibe el carrito armado.',
     body: 'Tienda de útiles en Arequipa. La API lee la lista del colegio (foto, PDF o Word) con Claude y la arma del catálogo en Económico, Normal y Premium. También se puede comprar la lista ya aprobada de tu colegio o útil por útil, y sumar forrado, etiquetas y libros.',
     tags: [
@@ -150,6 +196,13 @@ export const PROJECTS = [
   },
   {
     name: 'FixGo',
+    type: 'SaaS multitenant',
+    did: [
+      'Diseñé el modelo multitenant: cada taller ve solo sus datos dentro de la misma base.',
+      'Backend por capas con Dapper, Unit of Work y JWT con roles de dueño, mecánico y cliente.',
+      'Tablero por etapas, historial por placa e indicadores con Recharts.',
+      'Mapa de talleres para conductores con Leaflet.',
+    ],
     sub: 'SaaS multitenant y marketplace para talleres automotrices.',
     body: 'El cliente aprueba el presupuesto desde el celular. Tablero por etapas, historial por placa y un mapa donde los conductores encuentran el taller; dueño, mecánico y cliente ven cada uno lo suyo. Multitenant: cada taller ve solo sus datos dentro de la misma base. Backend por capas con Dapper, Unit of Work y ASP.NET.',
     tags: [
@@ -180,6 +233,12 @@ export const PROJECTS = [
   },
   {
     name: 'HuellaGo',
+    type: 'Web y app móvil',
+    did: [
+      'Diseñé el producto de cero: mapa, eventos, rutas, adopciones y comunidades.',
+      'Web en Next.js con Radix UI y Zustand; app móvil en Flutter con Riverpod.',
+      'Mapas con Leaflet y Google Maps.',
+    ],
     sub: 'Cada paseo deja huella.',
     body: 'Plataforma pet friendly en Arequipa: mapa de veterinarias, paseadores, hoteles y refugios, eventos con inscripción, rutas de paseo calificadas por la comunidad, adopciones y comunidades. Producto diseñado de cero, con web en Next.js y app móvil en Flutter.',
     tags: ['Next.js', 'Tailwind', 'Radix UI', 'Zustand', 'Leaflet', 'Google Maps', 'Flutter', 'Riverpod', 'Dio'],

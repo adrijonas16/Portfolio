@@ -49,11 +49,20 @@ try {
   check(true, 'loader finishes and releases the page');
 
   check((await page.evaluate(() => scrollY)) === 0, 'page opens at the top');
-  check((await page.locator('#track .pn').count()) === PROJECTS.length, `renders ${PROJECTS.length} project panels`);
   check(
-    (await page.locator('#track a.go').count()) === PROJECTS.filter((p) => p.live).length,
+    (await page.locator('#pjStage .pj-case').count()) === PROJECTS.length,
+    `renders ${PROJECTS.length} project panels`,
+  );
+  check(
+    (await page.locator('#pjStage a.go').count()) === PROJECTS.filter((p) => p.live).length,
     'every live project has a button',
   );
+  await page.locator('#pj-tab-2').click();
+  check(
+    (await page.locator('#pj-case-2').isVisible()) && !(await page.locator('#pj-case-0').isVisible()),
+    'project tabs switch the visible case',
+  );
+  await page.locator('#pj-tab-0').click();
 
   await page.waitForTimeout(2500);
   check((await page.locator('#edCode .ln').count()) > 1, 'hero editor is typing');
