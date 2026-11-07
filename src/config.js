@@ -4,7 +4,6 @@ export const isTouch = matchMedia('(hover: none), (pointer: coarse)').matches;
 
 export const EMAIL = 'adrijonas16@gmail.com';
 
-
 /** 3D model and liveries for the helmet viewer (served from /public). */
 export const HELMET = {
   model: '/models/helmet.glb',
