@@ -76,7 +76,12 @@ try {
   await page.waitForTimeout(2500);
   check((await page.locator('#edCode .ln').count()) > 1, 'hero editor is typing');
 
-  await page.evaluate(() => document.querySelector('#raya').scrollIntoView());
+  await page.evaluate(() => document.querySelector('#juegos').scrollIntoView());
+  await page.locator('#lib-tab-raya').click();
+  check(
+    (await page.locator('#lib-page-raya').isVisible()) && !(await page.locator('#lib-page-bonk').isVisible()),
+    'library: choosing a game opens its page',
+  );
   await page.locator('#board .col').nth(3).click();
   const bothMoved = await page
     .waitForFunction(() => document.querySelectorAll('#board .chip').length === 2, null, { timeout: 8000 })
@@ -89,12 +94,28 @@ try {
   await page.evaluate(() => document.querySelector('#modelado').scrollIntoView());
   await page.waitForFunction(() => !document.querySelector('#vLoad'), null, { timeout: 60000 });
   check(true, '3D helmet loads');
+  check(/Vértices \d/.test(await page.locator('#edStats').textContent()), '3D editor shows the real vertex count');
+  await page.locator('.ed-shading [data-shade="wire"]').click();
+  await page.locator('#livs [data-l="champion"]').click();
+  check(
+    (await page.locator('.ed-shading [data-shade="material"]').getAttribute('aria-checked')) === 'true',
+    '3D editor: picking a finish switches back to the material view',
+  );
+
+  await page.evaluate(() => document.querySelector('#trayectoria').scrollIntoView());
+  await page.locator('#git-bsg').click();
+  check(
+    (await page.locator('.gs-body[data-job="bsg"]').isVisible()) &&
+      !(await page.locator('.gs-body[data-job="imb"]').isVisible()) &&
+      (await page.locator('#gitGraph .git-lane').count()) > 0,
+    'experience: choosing a branch in the git log shows that job',
+  );
 
   await page.evaluate(() => document.querySelector('#path').scrollIntoView({ block: 'end' }));
   await page.waitForTimeout(1500);
   check((await page.locator('.stop.lit').count()) >= 1, 'formación: the path lights up while scrolling');
 
-  for (const id of ['hero', 'productos', 'juegos', 'bonk', 'raya', 'modelado', 'trayectoria', 'sobre', 'contacto']) {
+  for (const id of ['hero', 'productos', 'juegos', 'modelado', 'trayectoria', 'sobre', 'contacto']) {
     check(await page.locator(`#${id}`).isVisible(), `section #${id} is present`);
   }
 } catch (e) {

@@ -1,25 +1,4 @@
-/* ---------- 4 en raya ---------- */
-#raya {
-  padding-block: clamp(90px, 14vh, 160px);
-}
-.raya-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-  gap: clamp(32px, 6vw, 96px);
-  align-items: center;
-}
-.raya-grid h3 {
-  font-size: clamp(40px, 5.4vw, 88px);
-}
-.raya-grid p {
-  color: var(--mute);
-  margin-top: 22px;
-  max-width: 44ch;
-}
-.raya-grid p strong {
-  color: var(--ink);
-  font-weight: 600;
-}
+/* ---------- 4 en raya: tablero de la partida rápida ---------- */
 .status {
   margin-top: 28px;
   font-size: 15px;
@@ -128,11 +107,6 @@
   height: 60px;
   border-radius: 50%;
   background: radial-gradient(var(--accent), rgba(224, 64, 90, 0.8) 50%, transparent 70%);
-}
-@media (max-width: 860px) {
-  .raya-grid {
-    grid-template-columns: 1fr;
-  }
 }
 .dot-player {
   background: var(--accent);

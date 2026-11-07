@@ -33,11 +33,13 @@ src/
   main.js                  Orden de arranque: chrome → secciones → loader → entrada del hero
   config.js                Flags (reduced motion, táctil), correo, rutas de assets
   partials/                Marcado HTML, un archivo por sección
-    hero.html, projects.html, bonk.html, raya.html, model3d.html, about.html, contact.html…
-    experience/            Un archivo por empleo + path.html (formación)
+    hero.html, projects.html, games.html, model3d.html, experience.html, about.html, contact.html…
+    experience/            El detalle de cada empleo + path.html (formación)
     desk/                  Objetos de la mesa en SVG: laptop, lata, lapicero
   data/                    Contenido que se pinta con JS
     projects.js            Proyectos independientes (agregar uno = agregar un objeto)
+    games.js               Juegos de la biblioteca, con sus capturas y logros
+    experience.js          Empleos como ramas de git, con sus commits
     editor-files.js        Lo que escribe el editor del hero
   core/                    Piezas transversales: scroll, loader, cursor, nav, grano
   games/connect4.js        Reglas puras del 4 en raya (sin DOM, con tests)
@@ -47,6 +49,9 @@ src/
     book/input.js          Clic, toque, deslizar y flechas del teclado
     book/gallery.js        El mosaico de la página derecha elige la captura grande de la izquierda
     book/pages/            Plantillas: portada, índice e intro, páginas de proyecto, folios
+    library/               Biblioteca de juegos: library.js, templates.js y quick-match.js (4 en Raya jugable)
+    editor3d/              Editor 3D: scene.js (three.js), helmet.js (modelo y materiales), tools.js (herramientas)
+    experience/            Historial de git: templates.js, graph.js (ramas en SVG), diagrams.js
   styles/
     tokens.css             Colores, easing y espaciado
     base.css               Reset, tipografía, foco, skip link, reduced motion
@@ -54,11 +59,12 @@ src/
 tests/
   connect4.test.mjs        Reglas del juego
   html-partials.test.mjs   Includes: anidados, inexistentes, circulares, fuera de la carpeta
-  smoke.mjs                Playwright: carga, proyectos, editor, juego, 3D, formación y secciones
+  book-pages.test.mjs      Orden de las páginas del libro de proyectos
+  smoke.mjs                Playwright: carga, libro, biblioteca, juego, editor 3D, git log, formación y secciones
 ```
 
 Cada sección tiene sus tres piezas con el mismo nombre: `partials/x.html` (marcado), `styles/sections/x.css`
-(estilos) y `sections/x.js` (comportamiento).
+(estilos) y `sections/x.js` o la carpeta `sections/x/` cuando la sección es grande (comportamiento).
 
 ### Decisiones
 

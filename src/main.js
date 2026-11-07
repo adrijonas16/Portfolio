@@ -15,10 +15,9 @@ import { reducedMotion } from './config.js';
 
 import { initHero } from './sections/hero.js';
 import { initProjects } from './sections/projects.js';
-import { initBonk } from './sections/bonk.js';
-import { initRaya } from './sections/raya.js';
-import { initViewer3d } from './sections/viewer3d.js';
-import { initExperience } from './sections/experience.js';
+import { initLibrary } from './sections/library/library.js';
+import { initEditor3d } from './sections/editor3d/index.js';
+import { initExperience } from './sections/experience/index.js';
 import { initPath } from './sections/path.js';
 import { initAbout } from './sections/about.js';
 import { initContact } from './sections/contact.js';
@@ -28,9 +27,8 @@ initGrain();
 
 initProjects(); // renders the project panels first so the loader counts their images
 const revealHero = initHero();
-initBonk();
-initRaya();
-initViewer3d();
+initLibrary();
+initEditor3d();
 initExperience();
 initPath();
 initAbout();

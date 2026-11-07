@@ -1,0 +1,87 @@
+/**
+ * Games shown in the library. `status`: 'playable' (published, with a Play button) or 'dev' (in progress).
+ * `achievements` are real features of each game, shown as unlocked achievements.
+ */
+export const GAMES = [
+  {
+    id: 'bonk',
+    name: 'Bonk de los Dioses',
+    status: 'playable',
+    genre: 'Roguelike 3D',
+    platform: 'Navegador',
+    engine: 'three.js',
+    tagline: 'Roguelike 3D gratis en el navegador, sin descargas.',
+    body: 'Eliges un dios entre 91 de 14 tradiciones, sobrevives a hordas, subes de nivel con armas y dones al azar y vences a jefes y némesis. Tiene modo Historia y Supervivencia, cooperativo local y online, tienda, misiones, clasificación y clanes.',
+    play: 'https://bonk-de-los-dioses.vercel.app/',
+    repo: 'https://github.com/adrijonas16/bonk-de-los-dioses',
+    stack: ['three.js', 'JavaScript', 'Supabase Realtime', 'Playwright', 'Vercel'],
+    shots: [
+      ['/img/bonk-jotunheim.webp', 'Partida en Jötunheim: Zeus rodeado de draugr, monedas y el HUD'],
+      ['/img/bonk-tartaro.webp', 'Partida en el Tártaro: evento de erupción con rocas de lava'],
+      ['/img/bonk-machu.webp', 'Partida en Machu Picchu con Inti, dios andino'],
+      ['/img/bonk-menu.webp', 'Menú principal con Jugar, Supervivencia, Online y Local 2J'],
+      ['/img/bonk-dioses.webp', 'Selección de dioses: 91 dioses de 14 tradiciones'],
+    ],
+    achievements: [
+      ['Panteón completo', '91 dioses de 14 tradiciones, cada uno con arma, poder y don'],
+      ['Dos caminos', 'Modos Historia y Supervivencia'],
+      ['Nunca solo', 'Cooperativo local en el mismo teclado y online con salas'],
+      ['En tiempo real', 'Salas online sincronizadas con Supabase Realtime'],
+      ['A competir', 'Clasificación, misiones diarias y clanes'],
+      ['Sin sorpresas', 'Pruebas automáticas con Playwright'],
+    ],
+  },
+  {
+    id: 'raya',
+    name: '4 en Raya Brutal',
+    status: 'playable',
+    genre: 'Estrategia',
+    platform: 'Navegador',
+    engine: 'JavaScript',
+    tagline: 'El clásico de siempre, con poderes, hielo, terremotos y siete tableros.',
+    body: 'Cada pocas jugadas pasa algo: una bomba borra una ficha, el hielo congela una columna o tiembla el tablero. Juega contra la IA en tres niveles, con alguien en el mismo dispositivo o online con un amigo.',
+    play: 'https://4enraya-steel.vercel.app',
+    repo: 'https://github.com/adrijonas16/4enraya',
+    stack: ['JavaScript', 'HTML', 'CSS', 'IA por niveles', 'Vercel'],
+    embed: true,
+    shots: [
+      ['/img/raya-partida.webp', 'Partida contra la IA con los poderes de cada jugador'],
+      ['/img/raya-home.webp', 'Portada de 4 en Raya con el tablero y las formas de jugar'],
+      [
+        '/img/raya-tableros.webp',
+        'Siete estilos de tablero: clásico, madera, neón, cristal, noche y oro, lava y caramelo',
+      ],
+    ],
+    achievements: [
+      ['Caos controlado', 'Bombas, hielo y terremotos en mitad de la partida'],
+      ['Poderes', 'Hielo, ola, bomba y doble tirada'],
+      ['Siete tableros', 'Clásico, madera, neón, cristal, noche y oro, lava y caramelo'],
+      ['Rival a tu medida', 'IA en nivel fácil, normal y difícil'],
+      ['Con amigos', 'Dos jugadores en el mismo dispositivo u online'],
+    ],
+  },
+  {
+    id: 'godot',
+    name: 'Proyecto del GameLab',
+    status: 'dev',
+    engine: 'Godot',
+    tagline: 'Lo estoy haciendo en el GameLab de la UTP para obtener mi certificado.',
+    body: 'Aquí aprendo a hacer juegos con Godot, paso a paso, con la meta de publicar algún día mi propio videojuego.',
+  },
+  {
+    id: 'unity',
+    name: 'Prototipos en Unity',
+    status: 'dev',
+    engine: 'Unity',
+    tagline: 'Prototipos y pruebas de mecánicas en Unity.',
+    body: 'Muy pronto los subo aquí.',
+  },
+  {
+    id: 'unreal',
+    name: 'Prototipos en Unreal Engine',
+    status: 'dev',
+    engine: 'Unreal Engine',
+    tagline: 'Escenas y prototipos en Unreal Engine.',
+    body: 'Muy pronto los subo aquí.',
+  },
+];

@@ -6,12 +6,12 @@
 @import './sections/hero.css';
 @import './sections/marquee.css';
 @import './sections/section-heads.css';
-@import './sections/bonk.css';
+@import './sections/library.css';
 @import './sections/raya.css';
 @import './sections/desk.css';
 @import './sections/book.css';
 @import './sections/book-pages.css';
-@import './sections/model3d.css';
+@import './sections/editor3d.css';
 @import './sections/experience.css';
 @import './sections/path.css';
 @import './sections/about.css';

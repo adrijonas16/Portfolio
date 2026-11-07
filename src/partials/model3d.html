@@ -1,23 +1,86 @@
-<section id="modelado" class="wrap">
-  <div class="m3d">
-    <div class="m3d-txt">
-      <div class="level px">Modelado 3D</div>
-      <h2 class="wide h-l">Modelos que puedes girar</h2>
-      <p>También modelo en 3D. Uso Blender y 3ds Max para modelar y texturizar, Meshy AI para generar y acelerar bocetos, y llevo los modelos a la web con three.js o a motores como Unity, Unreal Engine y Godot.</p>
-      <p class="m3d-note">Este casco es mío: lo generé con Meshy AI, limpié el material y le hice cinco acabados. Arrástralo para girarlo.</p>
-      <div class="livs" id="livs" role="radiogroup" aria-label="Acabado del casco">
-        <button class="liv on" data-l="season" role="radio" aria-checked="true"><i class="sw sw-season"></i>Original</button>
-        <button class="liv" data-l="monza" role="radio" aria-checked="false"><i class="sw sw-monza"></i>Monza</button>
-        <button class="liv" data-l="champion" role="radio" aria-checked="false"><i class="sw sw-champion"></i>Oro</button>
-        <button class="liv" data-l="night" role="radio" aria-checked="false"><i class="sw sw-night"></i>Noche</button>
-        <button class="liv" data-l="chrome" role="radio" aria-checked="false"><i class="sw sw-chrome"></i>Cromo</button>
+<section id="modelado">
+  <div class="sh wrap">
+    <h2 class="wide h-l">Modelos que puedes girar</h2>
+    <p>También modelo en 3D: Blender y 3ds Max para modelar y texturizar, Meshy AI para generar y acelerar bocetos, y three.js, Unity, Unreal Engine o Godot para llevarlos a la web y a los juegos.</p>
+  </div>
+  <div class="wrap">
+    <div class="ed3d" id="viewer">
+      <header class="ed-menu">
+        <svg class="ed-logo" viewBox="0 0 66 44" aria-hidden="true"><path d="M3 42 L18 4 L33 42" fill="none" stroke="currentColor" stroke-width="6.5"/><path d="M62 11 A15 15 0 1 0 62 33" fill="none" stroke="currentColor" stroke-width="6.5"/></svg>
+        <span class="ed-menu-items" aria-hidden="true"><span>Archivo</span><span>Editar</span><span>Render</span><span>Ventana</span><span>Ayuda</span></span>
+        <span class="ed-workspaces" aria-hidden="true"><span class="on">Diseño</span><span>Modelado</span><span>Sombreado</span></span>
+        <span class="ed-file">casco.glb</span>
+      </header>
+
+      <div class="ed-body">
+        <div class="ed-tools" role="toolbar" aria-label="Herramientas del visor">
+          <button class="ed-tool on" data-tool="spin" aria-pressed="true" title="Giro automático">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a8 8 0 1 1-7.4 5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 4v5h5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <span>Girar solo</span>
+          </button>
+          <button class="ed-tool" data-tool="frame" title="Encuadrar el modelo">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>
+            <span>Encuadrar</span>
+          </button>
+          <button class="ed-tool on" data-tool="grid" aria-pressed="true" title="Mostrar cuadrícula">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9h18M3 15h18M9 3v18M15 3v18" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span>Cuadrícula</span>
+          </button>
+        </div>
+
+        <div class="ed-view">
+          <canvas id="v3d" aria-label="Casco 3D interactivo: arrástralo para girarlo"></canvas>
+          <div class="ed-view-info"><b>Perspectiva de usuario</b><span>(1) Colección | Casco</span></div>
+          <div class="ed-shading" role="radiogroup" aria-label="Modo de vista">
+            <button class="on" data-shade="material" role="radio" aria-checked="true">Material</button>
+            <button data-shade="solid" role="radio" aria-checked="false">Sólido</button>
+            <button data-shade="wire" role="radio" aria-checked="false">Alambre</button>
+          </div>
+          <svg class="ed-gizmo" id="gizmo" viewBox="-40 -40 80 80" aria-hidden="true">
+            <line data-axis="x" x2="24" y2="6" stroke="#e0405a" stroke-width="2.5" /><line data-axis="y" x2="0" y2="-26" stroke="#7fae5e" stroke-width="2.5" /><line data-axis="z" x2="-12" y2="12" stroke="#5b8de0" stroke-width="2.5" />
+            <g data-axis="x" transform="translate(24 6)"><circle r="8" fill="#e0405a" /><text dy="3.5">X</text></g>
+            <g data-axis="y" transform="translate(0 -26)"><circle r="8" fill="#7fae5e" /><text dy="3.5">Y</text></g>
+            <g data-axis="z" transform="translate(-12 12)"><circle r="8" fill="#5b8de0" /><text dy="3.5">Z</text></g>
+          </svg>
+          <div class="v-load" id="vLoad"><span>Cargando modelo</span><b id="vPct">0%</b></div>
+          <div class="ed-hint">Arrastra para girar</div>
+        </div>
+
+        <aside class="ed-panels">
+          <div class="ed-panel">
+            <h4>Escena</h4>
+            <ul class="ed-outliner">
+              <li><i class="ic-cam"></i>Cámara</li>
+              <li><i class="ic-light"></i>Luz principal</li>
+              <li><i class="ic-light"></i>Luz de contorno lila</li>
+              <li class="on"><i class="ic-mesh"></i>Casco</li>
+            </ul>
+          </div>
+          <div class="ed-panel">
+            <h4>Material</h4>
+            <div class="livs" id="livs" role="radiogroup" aria-label="Acabado del casco">
+              <button class="liv on" data-l="season" role="radio" aria-checked="true"><i class="sw sw-season"></i>Original</button>
+              <button class="liv" data-l="monza" role="radio" aria-checked="false"><i class="sw sw-monza"></i>Monza</button>
+              <button class="liv" data-l="champion" role="radio" aria-checked="false"><i class="sw sw-champion"></i>Oro</button>
+              <button class="liv" data-l="night" role="radio" aria-checked="false"><i class="sw sw-night"></i>Noche</button>
+              <button class="liv" data-l="chrome" role="radio" aria-checked="false"><i class="sw sw-chrome"></i>Cromo</button>
+            </div>
+          </div>
+          <div class="ed-panel">
+            <h4>Cómo lo hice</h4>
+            <ol class="ed-steps">
+              <li>Lo generé con Meshy AI</li>
+              <li>Limpié el material y le hice cinco acabados</li>
+              <li>Lo comprimí y lo traje a la web con three.js</li>
+            </ol>
+          </div>
+        </aside>
       </div>
-      <div class="chips"><span>Blender</span><span>3ds Max</span><span>Meshy AI</span><span>three.js</span><span>Unity</span><span>Unreal Engine</span><span>Godot</span></div>
-    </div>
-    <div class="viewer" id="viewer">
-      <canvas id="v3d" aria-label="Casco 3D interactivo"></canvas>
-      <div class="v-load" id="vLoad"><span class="px">Cargando modelo</span><b id="vPct">0%</b></div>
-      <div class="v-hint">Arrastra para girar</div>
+
+      <footer class="ed-status" aria-live="polite">
+        <span id="edStats">Vértices — · Caras — · Objetos 1</span>
+        <span class="ed-made">Blender · 3ds Max · Meshy AI · three.js · Unity · Unreal Engine · Godot</span>
+      </footer>
     </div>
   </div>
 </section>

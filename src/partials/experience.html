@@ -1,15 +1,30 @@
 <section id="trayectoria">
   <div class="sh wrap">
     <h2 class="wide h-l">Experiencia</h2>
-    <p>Cinco años construyendo sistemas para los sectores educativo y financiero, en equipos ágiles. Esto es lo que hice en cada lugar.</p>
+    <p>Cinco años construyendo sistemas para los sectores educativo y financiero. Mi carrera como un historial de git: cada trabajo es una rama; elige una para ver qué hice ahí.</p>
   </div>
-  <div class="tl wrap">
-
-    <!-- @include partials/experience/imb.html -->
-    <!-- @include partials/experience/coopac-kori.html -->
-    <!-- @include partials/experience/isp-corp.html -->
-    <!-- @include partials/experience/bsg.html -->
-    <!-- @include partials/experience/early-roles.html -->
+  <div class="wrap">
+    <div class="git">
+      <header class="git-top">
+        <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <code><span class="git-path">~/carrera</span> git log --graph --decorate</code>
+      </header>
+      <div class="git-wrap">
+        <div class="git-log" id="gitLog">
+          <svg class="git-graph" id="gitGraph" aria-hidden="true"></svg>
+          <div class="git-rows" id="gitRows" role="tablist" aria-label="Trabajos" aria-orientation="vertical"></div>
+        </div>
+        <div class="git-show" id="gitShow" aria-live="polite">
+          <div class="gs-head" id="gsHead"></div>
+          <!-- @include partials/experience/imb.html -->
+          <!-- @include partials/experience/coopac-kori.html -->
+          <!-- @include partials/experience/isp-corp.html -->
+          <!-- @include partials/experience/bsg.html -->
+          <!-- @include partials/experience/zanahoria.html -->
+          <!-- @include partials/experience/todos.html -->
+        </div>
+      </div>
+    </div>
     <!-- @include partials/experience/path.html -->
   </div>
 </section>

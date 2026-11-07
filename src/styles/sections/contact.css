@@ -32,7 +32,7 @@
   margin-top: 12px;
   min-height: 1.4em;
 }
-footer {
+.site-foot {
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -61,6 +61,6 @@ footer {
   max-width: 44ch;
   font-size: clamp(18px, 1.5vw, 22px);
 }
-footer a {
+.site-foot a {
   text-decoration: none;
 }

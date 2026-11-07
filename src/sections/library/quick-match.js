@@ -1,6 +1,6 @@
-import { gsap } from '../core/scroll.js';
-import { reducedMotion } from '../config.js';
-import { $ } from '../core/dom.js';
+import { gsap } from '../../core/scroll.js';
+import { reducedMotion } from '../../config.js';
+import { $ } from '../../core/dom.js';
 import {
   ROWS,
   COLS,
@@ -11,14 +11,14 @@ import {
   winningLine,
   explode,
   chooseMove,
-} from '../games/connect4.js';
+} from '../../games/connect4.js';
 
 const PLAYER = 1;
 const MACHINE = 2;
 const MACHINE_DELAY = 520;
 
-/** Playable mini 4 en Raya Brutal against the machine. Rules live in games/connect4.js. */
-export function initRaya() {
+/** Quick match of 4 en Raya Brutal against the machine, inside the library. Rules live in games/connect4.js. */
+export function initQuickMatch() {
   const boardEl = $('#board');
   const turnEl = $('#turn');
   const chaosEl = $('#chaos');

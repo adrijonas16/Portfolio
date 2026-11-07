@@ -84,16 +84,6 @@ section {
   position: relative;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .bonk-frame {
-    transform: none;
-  }
-  .bonk-copy,
-  .realm {
-    opacity: 1;
-  }
-}
-
 /* small label above a section title, in the pixel face */
 .level {
   color: var(--accent);
@@ -119,4 +109,51 @@ section {
 }
 .skip:focus {
   top: 16px;
+}
+
+/* shared: tag chips and inline text links */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.chips span {
+  white-space: nowrap;
+  font-size: 12.5px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.links a {
+  text-decoration: none;
+  border-bottom: 1.5px solid currentColor;
+  padding-bottom: 2px;
+}
+.links a:hover {
+  color: var(--accent);
+}
+
+/* shared: the three dots of an app window bar */
+.win-dots {
+  display: flex;
+  gap: 7px;
+}
+.win-dots i {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #3a3a41;
+}
+
+/* the hidden attribute always wins over a component's display */
+[hidden] {
+  display: none !important;
 }
