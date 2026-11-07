@@ -1,10 +1,18 @@
 <section id="productos">
   <div class="sh wrap">
     <h2 class="wide h-l">Proyectos independientes</h2>
-    <p>Proyectos propios, fuera de mi trabajo en empresa. Los ideo, los diseño, los construyo y los despliego yo misma en Vercel, Netlify, Railway y Render.</p>
+    <p>Proyectos propios, fuera de mi trabajo en empresa. Los ideo, los diseño, los construyo y los despliego yo misma. Abre el libro y pasa las páginas.</p>
   </div>
-  <div class="pj wrap">
-    <div class="pj-tabs" role="tablist" aria-label="Elige un proyecto" id="pjTabs"></div>
-    <div class="pj-stage" id="pjStage"></div>
+  <div class="desk">
+    <div class="book-view">
+      <div class="book" id="book" tabindex="0" role="region" aria-roledescription="libro" aria-label="Libro de proyectos independientes">
+        <!-- leaves are rendered by sections/projects.js -->
+      </div>
+    </div>
+    <div class="book-ctrl">
+      <button class="book-btn" id="bookPrev" aria-label="Página anterior">Anterior</button>
+      <p class="book-pos" id="bookPos" aria-live="polite">Libro cerrado</p>
+      <button class="book-btn" id="bookNext" aria-label="Página siguiente">Abrir el libro</button>
+    </div>
   </div>
 </section>

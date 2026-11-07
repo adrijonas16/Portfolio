@@ -41,6 +41,8 @@ src/
   core/                    Piezas transversales: scroll, loader, cursor, nav, grano
   games/connect4.js        Reglas puras del 4 en raya (sin DOM, con tests)
   sections/                Un módulo JS por sección: comportamiento y animaciones
+    book/book.js           Libro con páginas que se voltean (genérico: recibe hojas con frente y dorso)
+    book/pages.js          Plantillas de cada página: portada, índice, capturas, detalle, final
   styles/
     tokens.css             Colores, easing y espaciado
     base.css               Reset, tipografía, foco, skip link, reduced motion

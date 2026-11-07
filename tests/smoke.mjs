@@ -50,19 +50,28 @@ try {
 
   check((await page.evaluate(() => scrollY)) === 0, 'page opens at the top');
   check(
-    (await page.locator('#pjStage .pj-case').count()) === PROJECTS.length,
-    `renders ${PROJECTS.length} project panels`,
+    (await page.locator('#book .pg-text').count()) === PROJECTS.length,
+    `book has a page for each of ${PROJECTS.length} projects`,
   );
   check(
-    (await page.locator('#pjStage a.go').count()) === PROJECTS.filter((p) => p.live).length,
+    (await page.locator('#book a.go').count()) === PROJECTS.filter((p) => p.live).length,
     'every live project has a button',
   );
-  await page.locator('#pj-tab-2').click();
+  await page.locator('#bookNext').scrollIntoViewIfNeeded();
+  await page.locator('#bookNext').click();
+  await page.waitForTimeout(1200);
+  await page.locator('#book .toc-row[data-goto="2"]').click();
+  await page.waitForTimeout(1600);
   check(
-    (await page.locator('#pj-case-2').isVisible()) && !(await page.locator('#pj-case-0').isVisible()),
-    'project tabs switch the visible case',
+    (await page.locator('#bookPos').textContent()).includes(PROJECTS[2].name) &&
+      !(await page
+        .locator('#book .leaf')
+        .nth(4)
+        .locator('.front')
+        .evaluate((f) => f.inert)),
+    'book opens and the index jumps to a project',
   );
-  await page.locator('#pj-tab-0').click();
+  await page.evaluate(() => scrollTo(0, 0));
 
   await page.waitForTimeout(2500);
   check((await page.locator('#edCode .ln').count()) > 1, 'hero editor is typing');
