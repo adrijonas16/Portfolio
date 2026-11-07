@@ -50,7 +50,7 @@ try {
 
   check((await page.evaluate(() => scrollY)) === 0, 'page opens at the top');
   check(
-    (await page.locator('#book .pg-text').count()) === PROJECTS.length,
+    (await page.locator('#book .pg-details').count()) === PROJECTS.length,
     `book has a page for each of ${PROJECTS.length} projects`,
   );
   check(

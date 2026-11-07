@@ -1,99 +1,83 @@
 import { gsap } from '../core/scroll.js';
 import { reducedMotion } from '../config.js';
-import { $, $$ } from '../core/dom.js';
+import { $ } from '../core/dom.js';
 import { PROJECTS } from '../data/projects.js';
-import { createBook } from './book/book.js';
-import { cover, intro, contents, projectImages, projectText, lastPage } from './book/pages.js';
-
-/** First spread that holds a project (0 = cover, 1 = intro + table of contents). */
-const FIRST = 2;
+import { createBook, MOBILE } from './book/book.js';
+import { bindBookInput } from './book/input.js';
+import { initMosaics } from './book/gallery.js';
+import { buildLeaves, FIRST_PROJECT_SPREAD } from './book/pages/index.js';
 
 /**
- * Independent projects as a book on a desk: one double page per project,
- * screenshots on the left and the story on the right.
+ * Independent projects: a black brochure lying on the desk. One double page per project.
+ * This file only wires the pieces together: content (pages/), motion (book.js),
+ * input (input.js), the screenshot mosaic (gallery.js) and the controls under the book.
  */
 export function initProjects() {
-  const leaves = [
-    { front: cover(), back: intro() },
-    { front: contents(PROJECTS), back: projectImages(PROJECTS[0], 0) },
-    ...PROJECTS.map((p, i) => ({
-      front: projectText(p, i),
-      back: i + 1 < PROJECTS.length ? projectImages(PROJECTS[i + 1], i + 1) : lastPage(),
-    })),
-  ];
-
   const el = $('#book');
-  const prevBtn = $('#bookPrev');
-  const nextBtn = $('#bookNext');
-  const pos = $('#bookPos');
+  const controls = { prev: $('#bookPrev'), next: $('#bookNext'), pos: $('#bookPos') };
 
-  const book = createBook(el, leaves, {
-    onChange: ({ spread, total }) => {
-      const project = PROJECTS[spread - FIRST];
-      pos.textContent =
-        spread === 0
-          ? 'Libro cerrado'
-          : spread === 1
-            ? 'Índice'
-            : project
-              ? `Proyecto ${spread - FIRST + 1} de ${PROJECTS.length}: ${project.name}`
-              : 'Fin del libro';
-      prevBtn.disabled = spread === 0;
-      nextBtn.disabled = spread === total;
-      nextBtn.textContent = spread === 0 ? 'Abrir el libro' : 'Siguiente';
-      el.classList.toggle('is-closed', spread === 0);
+  const book = createBook(el, buildLeaves(PROJECTS), {
+    onChange: (state) => {
+      updateControls(controls, state);
+      layBook(state.spread === 0);
     },
   });
 
-  prevBtn.addEventListener('click', book.prev);
-  nextBtn.addEventListener('click', book.next);
+  bindBookInput(book);
+  initMosaics(el);
+  controls.prev.addEventListener('click', book.prev);
+  controls.next.addEventListener('click', book.next);
 
-  // Table of contents and "back to contents" links.
+  // Table of contents and "back to contents".
   el.addEventListener('click', (e) => {
     const target = e.target.closest('[data-goto]');
     if (!target) return;
-    const to = target.dataset.goto;
-    if (to === 'toc') book.go(1, 'r');
-    else book.go(FIRST + Number(to), 'l');
+    if (target.dataset.goto === 'toc') book.go(1, 'r');
+    else book.go(FIRST_PROJECT_SPREAD + Number(target.dataset.goto), 'l');
   });
 
-  // Arrow keys turn pages while the book is on screen.
-  let inView = false;
-  new IntersectionObserver(([e]) => (inView = e.isIntersecting), { threshold: 0.5 }).observe(el);
-  addEventListener('keydown', (e) => {
-    if (!inView || e.target.closest?.('input, textarea')) return;
-    if (e.key === 'ArrowRight') book.next();
-    if (e.key === 'ArrowLeft') book.prev();
+  settleOnDesk();
+}
+
+function updateControls({ prev, next, pos }, { spread, total }) {
+  const project = PROJECTS[spread - FIRST_PROJECT_SPREAD];
+  pos.textContent =
+    spread === 0
+      ? 'Libro cerrado'
+      : spread === 1
+        ? 'Índice'
+        : project
+          ? `Proyecto ${spread - FIRST_PROJECT_SPREAD + 1} de ${PROJECTS.length}: ${project.name}`
+          : 'Fin del libro';
+  prev.disabled = spread === 0;
+  next.disabled = spread === total;
+  next.textContent = spread === 0 ? 'Abrir el libro' : 'Siguiente';
+}
+
+/**
+ * The desk is seen from above at an angle. Closed, the book lies crooked and flat on it;
+ * open, it straightens up and tilts towards you so the pages read well.
+ */
+function layBook(closed) {
+  $('#book').classList.toggle('is-closed', closed);
+  const tilt = MOBILE.matches ? 4 : closed ? 26 : 14;
+  gsap.to('.book-tilt', {
+    rotation: closed ? -5 : 0,
+    rotationX: tilt,
+    duration: reducedMotion ? 0 : 1.1,
+    ease: 'power3.inOut',
   });
-
-  $$('.pg-photo', el).forEach(initGallery);
-  introAnimation();
 }
 
-/** Thumbnails swap the photo printed on the page. */
-function initGallery(photo) {
-  const shots = $$('.shot', photo);
-  const thumbs = $$('.pg-th', photo.parentElement);
-  thumbs.forEach((t, k) =>
-    t.addEventListener('click', () => {
-      shots.forEach((s, j) => s.classList.toggle('on', j === k));
-      thumbs.forEach((b, j) => {
-        b.classList.toggle('on', j === k);
-        b.setAttribute('aria-pressed', j === k);
-      });
-    }),
-  );
-}
-
-/** The closed book settles onto the desk the first time you reach it. */
-function introAnimation() {
+/** The first time you reach the desk the book drops onto it. */
+function settleOnDesk() {
   if (reducedMotion) return;
-  gsap.from('.book-view', {
-    rotationX: 28,
-    y: 90,
-    opacity: 0,
-    duration: 1.4,
+  gsap.from('.book-tilt', {
+    y: -60,
+    scale: 1.08,
+    autoAlpha: 0,
+    duration: 1.3,
     ease: 'expo.out',
-    scrollTrigger: { trigger: '.desk', start: 'top 75%' },
+    scrollTrigger: { trigger: '.desk', start: 'top 70%' },
   });
 }

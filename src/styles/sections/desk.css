@@ -1,0 +1,114 @@
+/* ---------- proyectos: la mesa negra, la luz de la lámpara y lo que hay encima ---------- */
+#productos {
+  background: var(--bg);
+}
+
+.desk {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(48px, 8vh, 100px) var(--g) clamp(60px, 9vh, 110px);
+  background:
+    radial-gradient(ellipse 48% 46% at 50% 44%, rgba(236, 228, 255, 0.11), transparent 72%),
+    radial-gradient(ellipse 85% 80% at 50% 45%, transparent 40%, rgba(0, 0, 0, 0.78) 100%),
+    url('/img/desk-wood.webp') center / cover,
+    #0c0b0d;
+  border-block: 1px solid var(--line);
+}
+
+/* props lying around the book */
+.desk-props {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.prop {
+  position: absolute;
+  filter: drop-shadow(0 28px 34px rgba(0, 0, 0, 0.7));
+}
+.prop-laptop {
+  width: clamp(380px, 36vw, 580px);
+  left: calc(-1 * clamp(240px, 23vw, 360px));
+  top: 4%;
+  transform: rotate(17deg);
+}
+.prop-can {
+  width: clamp(88px, 7.6vw, 124px);
+  right: clamp(14px, 2.6vw, 56px);
+  bottom: 9%;
+}
+.prop-pen {
+  width: clamp(150px, 13vw, 230px);
+  right: clamp(8px, 2vw, 40px);
+  top: 12%;
+  transform: rotate(-34deg);
+}
+
+/* controls under the book */
+.book-ctrl {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 2vw, 24px);
+  margin-top: clamp(30px, 5vh, 52px);
+}
+.book-btn {
+  min-width: 132px;
+  padding: 11px 20px;
+  border-radius: 999px;
+  border: 1.5px solid var(--ink);
+  background: rgba(9, 9, 11, 0.6);
+  color: var(--ink);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.3s,
+    color 0.3s,
+    opacity 0.3s;
+}
+.book-btn:hover:not(:disabled) {
+  background: var(--ink);
+  color: var(--bg);
+}
+.book-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.book-pos {
+  min-width: 20ch;
+  text-align: center;
+  font-size: 14px;
+  color: #c9c4ba;
+}
+
+@media (max-width: 900px) {
+  .prop-laptop {
+    width: 300px;
+    left: -220px;
+    top: -30px;
+  }
+  .prop-can {
+    width: 60px;
+    right: 10px;
+    top: 14px;
+    bottom: auto;
+  }
+  .prop-pen {
+    display: none;
+  }
+  .book-ctrl {
+    gap: 10px;
+  }
+  .book-btn {
+    min-width: 0;
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  .book-pos {
+    min-width: 0;
+    flex: 1;
+    font-size: 13px;
+  }
+}

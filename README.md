@@ -35,14 +35,18 @@ src/
   partials/                Marcado HTML, un archivo por sección
     hero.html, projects.html, bonk.html, raya.html, model3d.html, about.html, contact.html…
     experience/            Un archivo por empleo + path.html (formación)
+    desk/                  Objetos de la mesa en SVG: laptop, lata, lapicero
   data/                    Contenido que se pinta con JS
     projects.js            Proyectos independientes (agregar uno = agregar un objeto)
     editor-files.js        Lo que escribe el editor del hero
   core/                    Piezas transversales: scroll, loader, cursor, nav, grano
   games/connect4.js        Reglas puras del 4 en raya (sin DOM, con tests)
   sections/                Un módulo JS por sección: comportamiento y animaciones
-    book/book.js           Libro con páginas que se voltean (genérico: recibe hojas con frente y dorso)
-    book/pages.js          Plantillas de cada página: portada, índice, capturas, detalle, final
+    projects.js            Solo conecta las piezas del libro de proyectos
+    book/book.js           Motor del libro: estado y giro de páginas (no sabe nada de proyectos)
+    book/input.js          Clic, toque, deslizar y flechas del teclado
+    book/gallery.js        El mosaico de la página derecha elige la captura grande de la izquierda
+    book/pages/            Plantillas: portada, índice e intro, páginas de proyecto, folios
   styles/
     tokens.css             Colores, easing y espaciado
     base.css               Reset, tipografía, foco, skip link, reduced motion

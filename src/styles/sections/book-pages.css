@@ -1,0 +1,366 @@
+/* ---------- lo impreso en cada página negra ---------- */
+.pg {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: clamp(22px, 2.6vw, 34px) clamp(22px, 2.6vw, 34px) 42px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.pg::-webkit-scrollbar {
+  display: none;
+}
+.pg-kicker {
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--accent);
+}
+.pg-lead {
+  font-size: clamp(19px, 1.6vw, 24px);
+  line-height: 1.35;
+}
+.pg p {
+  max-width: 46ch;
+}
+.pg a {
+  color: var(--accent);
+}
+.folio {
+  position: absolute;
+  bottom: 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.5px;
+  color: var(--page-mute);
+}
+.folio-l {
+  left: clamp(22px, 2.6vw, 34px);
+}
+.folio-r {
+  right: clamp(22px, 2.6vw, 34px);
+}
+
+/* intro and last page */
+.pg-intro {
+  justify-content: center;
+  gap: 16px;
+}
+.pg-intro p:not(.pg-lead, .pg-kicker) {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #c4bfb6;
+}
+.pg-how {
+  border-top: 1px solid var(--page-line);
+  padding-top: 16px;
+}
+.only-touch {
+  display: none;
+}
+
+/* contents */
+.pg-h {
+  font-size: clamp(34px, 3.2vw, 52px);
+  margin-bottom: 10px;
+}
+.toc {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.toc-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3ch auto 1fr;
+  align-items: baseline;
+  gap: 14px;
+  padding: clamp(9px, 1.5vh, 14px) 0;
+  border: 0;
+  border-bottom: 1px solid var(--page-line);
+  background: none;
+  color: var(--page-ink);
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.toc-page {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12.5px;
+  color: var(--accent);
+}
+.toc-name {
+  font-size: clamp(16px, 1.3vw, 19px);
+  font-weight: 650;
+  transition: color 0.3s;
+}
+.toc-type {
+  justify-self: end;
+  font-size: 12.5px;
+  color: var(--page-mute);
+}
+.toc-row:hover .toc-name {
+  color: var(--accent);
+}
+
+/* project, left page: full-bleed screenshot with the title printed over it */
+.pg-open {
+  padding: 0 0 42px;
+  gap: 12px;
+}
+.pg-hero {
+  position: relative;
+  flex: 0 0 58%;
+  margin: 0;
+  overflow: hidden;
+  background: #1a1a1d;
+}
+.pg-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 30%, rgba(17, 17, 19, 0.9) 78%, var(--page));
+  pointer-events: none;
+}
+.hero-shot {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+.hero-shot.on {
+  opacity: 1;
+}
+.pg-cap {
+  position: relative;
+  z-index: 1;
+  margin-top: -96px;
+  padding-inline: clamp(22px, 2.6vw, 34px);
+}
+.pg-title {
+  font-size: clamp(30px, 2.7vw, 46px);
+  margin-block: 4px 8px;
+}
+.pg-sub {
+  font-size: 14.5px;
+  line-height: 1.4;
+  color: #d9d4ca;
+}
+.pg-body {
+  padding-inline: clamp(22px, 2.6vw, 34px);
+  font-size: 14px;
+  line-height: 1.6;
+  color: #b9b4ab;
+}
+
+/* project, right page: mosaic + details */
+.pg-mosaic {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.tile {
+  aspect-ratio: 16 / 10;
+  padding: 0;
+  border: 1.5px solid transparent;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #1a1a1d;
+  cursor: pointer;
+  opacity: 0.6;
+  transition:
+    opacity 0.3s,
+    border-color 0.3s;
+}
+.tile img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.tile:hover {
+  opacity: 0.9;
+}
+.tile.on {
+  opacity: 1;
+  border-color: var(--accent);
+}
+.pg-details h4 {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--page-mute);
+}
+.pg-did {
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  padding: 0;
+  margin: 0 0 4px;
+}
+.pg-did li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #d9d4ca;
+}
+.pg-did li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+.pg-stack {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #d9d4ca;
+}
+.pg-stack span {
+  white-space: nowrap;
+}
+.pg-stack i {
+  font-style: normal;
+  color: var(--page-mute);
+  margin-inline: 2px;
+}
+.pg-foot {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--page-line);
+  display: grid;
+  gap: 10px;
+}
+.pg-deploy {
+  font-size: 13px;
+  color: #d9d4ca;
+}
+.pg-deploy span {
+  color: var(--page-mute);
+}
+.pg-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.pg-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.3s,
+    color 0.3s,
+    border-color 0.3s;
+}
+.pg .pg-btn.go {
+  background: var(--accent);
+  border: 1.5px solid var(--accent);
+  color: #0b0b0d;
+}
+.pg .pg-btn.go:hover {
+  background: var(--page-ink);
+  border-color: var(--page-ink);
+}
+.pg .pg-btn.ghost {
+  background: transparent;
+  border: 1.5px solid var(--page-ink);
+  color: var(--page-ink);
+}
+.pg .pg-btn.ghost:hover {
+  background: var(--page-ink);
+  color: #0b0b0d;
+}
+.pg-end .pg-btn {
+  align-self: flex-start;
+}
+.pg-note {
+  font-size: 13px;
+  color: var(--page-mute);
+}
+
+/* typographic plate for projects without screenshots */
+.tm {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(20px, 2.4vw, 32px);
+  background: #1b1726;
+}
+.tm .big {
+  font-size: clamp(32px, 3.4vw, 56px);
+}
+.tm-rows {
+  display: grid;
+  gap: 9px;
+  margin-bottom: 70px;
+}
+.tm-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+.tm-row span:not(.bar) {
+  width: 8ch;
+}
+.tm-row i {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+}
+.tm-row.ok i {
+  background: var(--puna);
+}
+.tm-row.gap i {
+  background: var(--accent);
+}
+.tm-row.fit i {
+  background: var(--carmin);
+}
+.tm-row .bar {
+  flex: 1;
+  height: 7px;
+  border-radius: 4px;
+  background: rgba(243, 236, 223, 0.18);
+  position: relative;
+  overflow: hidden;
+}
+.tm-row .bar b {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--w);
+  background: var(--ink);
+  border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+  .only-touch {
+    display: block;
+  }
+  .only-desktop {
+    display: none;
+  }
+  .pg-mosaic {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
