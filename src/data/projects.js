@@ -27,6 +27,30 @@ export const PROJECTS = [
     ],
   },
   {
+    name: 'Altamira Residencias',
+    type: 'Inmobiliaria 3D',
+    did: [
+      'Modelé el edificio en three.js: se construye piso por piso al cargar y cada piso muestra su disponibilidad.',
+      'Armé la planta amueblada de cada piso y un recorrido a pie dentro de cada departamento, con vista desde las ventanas.',
+      'Hice la ficha de cada departamento con plano a escala, áreas y precio, la descarga en PDF y el simulador de plan de pagos.',
+      'Le di realismo con oclusión ambiental, iluminación HDRI y modelos generados con Meshy AI.',
+    ],
+    sub: 'Sitio de preventa de un edificio en 3D que recorres piso por piso y por dentro.',
+    body: 'Un edificio de 10 pisos y 34 departamentos: pasas el cursor sobre el edificio, eliges un piso, ves su planta con muebles y entras a cada departamento para recorrerlo. Cada departamento tiene su ficha con plano, áreas, acabados, precio y disponibilidad, y hay un simulador de plan de pagos. Es un proyecto de demostración.',
+    tags: ['three.js', 'GLTF', 'Oclusión ambiental (GTAO)', 'HDRI', 'CSS2DRenderer', 'jsPDF', 'Meshy AI', 'JavaScript'],
+    deploy: 'Vercel',
+    live: 'https://altamira-residencias.vercel.app/',
+    gallery: [
+      ['/img/altamira-edificio.webp', 'El edificio en 3D con la lista de pisos y su disponibilidad'],
+      ['/img/altamira-piso.webp', 'Planta del piso 7 en 3D con los cuatro departamentos amueblados'],
+      ['/img/altamira-depto.webp', 'Departamento 701 en 3D con cada ambiente y sus metros cuadrados'],
+      ['/img/altamira-recorrido.webp', 'Recorrido a pie: la vista desde el balcón del departamento'],
+      ['/img/altamira-ficha.webp', 'Ficha del departamento con el plano a escala'],
+      ['/img/altamira-pagos.webp', 'Simulador del plan de pagos'],
+      ['/img/altamira-tipologias.webp', 'Las cuatro tipologías con sus planos'],
+    ],
+  },
+  {
     name: 'Rivals',
     type: 'Ecommerce',
     did: [
