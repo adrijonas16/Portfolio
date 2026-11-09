@@ -67,7 +67,11 @@
 .certs {
   margin-top: 40px;
   display: grid;
-  gap: 12px;
+  gap: 26px;
+}
+.cert-group {
+  display: grid;
+  gap: 10px;
 }
 .certs h5 {
   font-size: 16px;
@@ -101,7 +105,7 @@
   color: var(--bg);
   font-variation-settings: 'wdth' 125;
   font-weight: 900;
-  font-size: 20px;
+  font-size: 17px;
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 .cert b {
